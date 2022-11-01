@@ -4,7 +4,7 @@ const path = require('path')
 module.exports = {
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'main.js'
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -24,7 +24,16 @@ module.exports = {
         }
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
-        type: 'asset/inline'
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/images/[hash].[ext]' // Directorio de salida
+        }
+      }, {
+        test: /\.(png|svg|pdf)$/i,
+        type: 'asset/resource',
+        generator: {
+          filename: 'assets/fonts/[hash].[ext]' // Directorio de salida
+        }
       }
     ]
   },
