@@ -8,17 +8,6 @@ export const Nav = styled.nav`
     height: 50px; 
     width: 100%;
 `
-export const LinksContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-end;
-    align-items: center;
-    height: 45px; 
-    width: fit-content;
-    padding: 0 10px;
-    background-color: #1e1e1e;
-    border-radius: 8px;
-`
 
 export const CustomLink = styled(Link)`
     color: ${props => props.active ? '#fff' : '#666'}; 

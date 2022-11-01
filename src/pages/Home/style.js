@@ -49,6 +49,7 @@ export const Subtitle = styled.h2`
   background: linear-gradient(150deg, #0b2ef3, #02fbff, #0b2ef3);
   background-size: 200% 200%;
   -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
   background-clip: text;
   animation: ${changeTextGradient} 10s ease-in-out infinite;
   user-select: none;
