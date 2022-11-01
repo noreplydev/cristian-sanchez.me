@@ -26,13 +26,13 @@ module.exports = {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/images/[hash].[ext]' // Directorio de salida
+          filename: 'assets/images/[hash].[ext]'
         }
       }, {
         test: /\.(png|svg|pdf)$/i,
         type: 'asset/resource',
         generator: {
-          filename: 'assets/fonts/[hash].[ext]' // Directorio de salida
+          filename: 'assets/fonts/[hash].[ext]'
         }
       }
     ]
