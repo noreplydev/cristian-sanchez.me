@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -25,10 +25,16 @@ module.exports = {
       }, {
         test: /\.(woff|woff2|eot|ttf|otf)$/i,
         type: 'asset/resource'
+      }, {
+        test: /\.(png|svg)$/i,
+        type: 'asset/resource'
       }
     ]
   },
   mode: 'development',
   infrastructureLogging: { level: 'error' },
-  stats: 'minimal'
+  stats: 'minimal',
+  devServer: {
+    historyApiFallback: true
+  }
 }
