@@ -12,7 +12,13 @@ export const Nav = styled.nav`
 export const CustomLink = styled(Link)`
     color: ${props => props.active ? '#fff' : '#666'}; 
     text-decoration: none;
+    font-size: 1.08rem;
+    font-family: 'poppins-medium';
     margin-left: 25px; 
     cursor: pointer;
     transition: all .15s ease-in-out;
+
+    &:hover {
+        color: #fff;
+    }
 `

@@ -1,14 +1,14 @@
 export const sections = [
   {
-    name: 'home',
+    name: 'Home',
     path: '/'
   },
   {
-    name: 'projects',
-    path: '/projects'
+    name: 'Contact',
+    path: '/contact'
   },
   {
-    name: 'contacts',
-    path: '/contacts'
+    name: 'Documentation',
+    path: '/docs'
   }
 ]
