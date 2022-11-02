@@ -33,7 +33,7 @@ export const ButtonBackground = styled.div`
   display: flex;
   justify-content: center;
   align-items: center; 
-  background: linear-gradient(150deg, #0b2ef3, #03d9dd, #0b2ef3);
+  background: linear-gradient(130deg, #0b2ef3, #03d9dd, #0b2ef3);
   background-size: 200% 200%;
   padding: 1px;
   border-radius: 8px;
