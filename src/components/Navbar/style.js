@@ -10,7 +10,7 @@ export const Nav = styled.nav`
     width: 100%;
 `
 
-export const Logo = styled(Link)`
+export const Logo = styled.img`
     height: 40px;
     width: 40px;
     background: linear-gradient(135deg, #0a2efa, #01f7fb);

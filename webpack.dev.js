@@ -35,6 +35,7 @@ module.exports = {
   infrastructureLogging: { level: 'error' },
   stats: 'minimal',
   devServer: {
-    historyApiFallback: true
+    historyApiFallback: true,
+    port: 5000
   }
 }

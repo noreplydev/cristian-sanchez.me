@@ -23,6 +23,9 @@ export const Image = styled.img`
   transform: translateY(-60%);
   height: auto; 
   width: 100vw;
+  pointer-events: none;
+  -moz-pointer-events: none;
+  -webkit-pointer-events: none;
 `
 
 export const MainSection = styled.section`

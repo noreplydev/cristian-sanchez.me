@@ -36,6 +36,15 @@ export const GlobalStyle = createGlobalStyle`
     body {
         background-color: #000; 
         font-size: 16px;
+    }
+
+    #root {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        height: 100vh;
+        width: 100vw;
         padding-inline: 50px; 
         padding-block: 30px; 
     }

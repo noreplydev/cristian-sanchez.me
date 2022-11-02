@@ -1,12 +1,17 @@
 import React from 'react'
 import { Nav, Logo, Sections, CustomLink } from './style'
 import { sections } from '../../data/sections'
-import { useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
+
+// Assets
+import logo from '../../assets/images/favicon.svg'
 
 export const Navbar = () => {
   return (
     <Nav>
-      <Logo to={'/'}></Logo>
+      <Link to={'/'}>
+        <Logo src={logo} alt='Cristian Sánchez blue logo'/>
+      </Link>
       <Sections>
         {
           sections.map(section => (
