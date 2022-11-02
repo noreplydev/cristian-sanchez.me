@@ -34,14 +34,14 @@ export const ButtonBackground = styled.div`
   justify-content: center;
   align-items: center; 
   background: linear-gradient(150deg, #0b2ef3, #03d9dd, #0b2ef3);
-  background-size: 300% 300%;
+  background-size: 200% 200%;
   padding: 1px;
   border-radius: 8px;
   box-shadow: 0px 0px 100px -10px #5282FF;
   -webkit-box-shadow: 0px 0px 100px -10px #5282FF; 
   transition: all 150ms ease-in-out;
   opacity: 1;
-  animation: ${changeGradient} 10s ease-in-out infinite;
+  animation: ${changeGradient} 8s ease-in-out infinite;
 `
 
 export const Button = styled.button`
@@ -78,16 +78,16 @@ export const ProjectsButton = styled.button`
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  background-color: #0080ff;
-  transition: all .10s ease-in-out;
+  background: linear-gradient(150deg, #0b2ef3, #03d9dd);
+  transition: all .200s ease-in-out;
 
   &:hover {
-    scale: 1.1; 
+    filter: saturate(2);
   }
-
 `
 
 export const Text = styled.p`
   font-size: 1.1rem;
   font-family: 'poppins-medium';
+  transition: all .2s ease-in-out;
 `

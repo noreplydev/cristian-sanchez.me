@@ -8,6 +8,10 @@ export const sections = [
     path: '/contact'
   },
   {
+    name: 'Projects',
+    path: '/projects'
+  },
+  {
     name: 'Documentation',
     path: '/docs'
   }
