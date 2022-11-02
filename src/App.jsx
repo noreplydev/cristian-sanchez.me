@@ -15,7 +15,7 @@ export const App = () => {
         <Route path="/projects" element={<Projects/>} />
         <Route path="/contact" element={<div>contact</div>} />
         <Route path="/docs" element={<div>contact</div>} />
-        <Route path="/*" element={<div>error</div>} />
+        <Route path="*" element={<div>error</div>} />
       </Routes>
     </BrowserRouter>
   )

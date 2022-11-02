@@ -18,8 +18,6 @@ export const Container = styled.div`
     align-items: center;
     height: 100%; 
     width: 100%;
-    border: 2px solid #fff;
-    box-shadow: inset 0 0 20px 20px #fff;
     border-radius: 15px;  
     overflow: hidden;
     z-index: 1;
