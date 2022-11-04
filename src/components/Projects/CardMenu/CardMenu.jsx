@@ -1,14 +1,12 @@
 import React from 'react'
 
 // STYLED COMPONENTS
-import { P } from './style.js'
+import { Anchor } from './style.js'
 
-export const CardMenu = ({ projectName }) => {
+export const CardMenu = ({ project }) => {
   return (
     <div>
-        <P>{projectName}</P>
-        <div>
-        </div>
+        <Anchor href={project.link} target='_blank'>{project.projectName}</Anchor>
     </div>
   )
 }

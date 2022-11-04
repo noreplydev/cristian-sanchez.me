@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from 'react'
+import { projects } from '../../data/projects'
 
 // STYLED COMPONENTS
 import { Parent, Container } from './styles'
 
 // COMPONENTS
 import { CardMenu } from '../../components/Projects/CardMenu/CardMenu.jsx'
-
-// ASSETS
-import passlock from '../../assets/images/projects/passlock.png'
-import easyIP from '../../assets/images/projects/easy-ip.png'
-import lorpie from '../../assets/images/projects/lorpie.png'
 
 export const Projects = () => {
   const [cards, setCards] = useState([])
@@ -60,18 +56,14 @@ export const Projects = () => {
 
   return (
     <Parent>
-      <Container className='card'>
-        <CardMenu projectName={'Passlock'}/>
-        <img src={passlock} alt='Passlock project dashboard image' loading='eager'/>
-      </Container>
-      <Container className='card'>
-        <CardMenu projectName={'Easy IP'}/>
-        <img src={easyIP} alt='Passlock project dashboard image' loading='eager'/>
-      </Container>
-      <Container className='card'>
-        <CardMenu projectName={'Lorpie'}/>
-        <img src={lorpie} alt='Passlock project dashboard image' loading='eager'/>
-      </Container>
+      {
+        projects.map((project, index) => (
+          <Container className='card' key={project.projectName}>
+            <CardMenu project={project}/>
+            <img src={project.image} alt='Passlock project dashboard image' loading='eager'/>
+          </Container>
+        ))
+      }
     </Parent>
   )
 }

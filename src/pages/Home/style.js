@@ -1,4 +1,5 @@
 import styled, { keyframes } from 'styled-components'
+import Lottie from 'lottie-react'
 
 // Animations
 const changeTextGradient = keyframes`
@@ -14,6 +15,27 @@ const changeTextGradient = keyframes`
   100% {
     background-position: 0% 0%;
   }
+`
+
+const fadeOutAnimation = keyframes`
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+`
+
+export const FadeOut = styled.section`
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #000;
+    z-index: 100;
+    animation: ${fadeOutAnimation} .8s ease-in-out forwards;
 `
 
 export const Image = styled.img`
