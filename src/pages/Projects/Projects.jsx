@@ -62,15 +62,15 @@ export const Projects = () => {
     <Parent>
       <Container className='card'>
         <CardMenu projectName={'Passlock'}/>
-        <img src={passlock} alt='Passlock project dashboard image' />
+        <img src={passlock} alt='Passlock project dashboard image' loading='eager'/>
       </Container>
       <Container className='card'>
         <CardMenu projectName={'Easy IP'}/>
-        <img src={easyIP} alt='Passlock project dashboard image' />
+        <img src={easyIP} alt='Passlock project dashboard image' loading='eager'/>
       </Container>
       <Container className='card'>
         <CardMenu projectName={'Lorpie'}/>
-        <img src={lorpie} alt='Passlock project dashboard image' />
+        <img src={lorpie} alt='Passlock project dashboard image' loading='eager'/>
       </Container>
     </Parent>
   )
