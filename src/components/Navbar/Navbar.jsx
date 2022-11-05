@@ -1,9 +1,18 @@
 import React from 'react'
-import { Nav, Logo, Sections, CustomLink } from './style'
-import { sections } from '../../data/sections'
 import { Link, useLocation } from 'react-router-dom'
 
-// Assets
+// STYLED COMPONENTS
+import {
+  Nav,
+  Logo,
+  Sections,
+  CustomLink
+} from './style'
+
+// COMPONENTS
+import { DropdownSection } from './DropdownSection/DropdownSection.jsx'
+
+import { sections } from '../../data/sections'
 import logo from '../../assets/images/favicon.svg'
 
 export const Navbar = () => {
@@ -14,11 +23,15 @@ export const Navbar = () => {
       </Link>
       <Sections>
         {
-          sections.map(section => (
-            section.path === useLocation().pathname
-              ? <CustomLink key={section.name} to={section.path} active="false">{section.name}</CustomLink>
-              : <CustomLink key={section.name} to={section.path}>{section.name}</CustomLink>
-          ))
+          sections.map(section => {
+            if (section.name !== 'Documentation') {
+              return section.path === useLocation().pathname
+                ? <CustomLink key={section.name} to={section.path} active="false">{section.name}</CustomLink>
+                : <CustomLink key={section.name} to={section.path}>{section.name}</CustomLink>
+            }
+
+            return <DropdownSection section={section}/>
+          })
         }
       </Sections>
     </Nav>

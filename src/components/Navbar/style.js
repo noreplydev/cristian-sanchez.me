@@ -24,6 +24,9 @@ export const Logo = styled.img`
 export const Sections = styled.div`
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%; 
 `
 
 export const CustomLink = styled(Link)`
@@ -32,13 +35,10 @@ export const CustomLink = styled(Link)`
     font-size: 1.08rem;
     font-family: 'poppins-medium';
     cursor: pointer;
-    margin-inline: 5px; 
     transition: all .15s ease-in-out;
-    padding: 5px 15px;
-    border-radius: 5px; 
+    margin-inline: 15px; 
 
     &:hover {
         color: #fff;
-        background-color: #383838;
     }
 `

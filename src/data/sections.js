@@ -9,6 +9,20 @@ export const sections = [
   },
   {
     name: 'Documentation',
-    path: '/docs'
+    path: '/docs',
+    sections: [
+      {
+        name: 'Getting Started',
+        path: '/docs/getting-started'
+      },
+      {
+        name: 'Components',
+        path: '/docs/components'
+      },
+      {
+        name: 'API',
+        path: '/docs/api'
+      }
+    ]
   }
 ]
