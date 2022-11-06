@@ -13,18 +13,16 @@ import {
 import { DropdownSection } from './DropdownSection/DropdownSection.jsx'
 
 import { sections } from '../../data/sections'
-import logo from '../../assets/images/favicon.svg'
 
 export const Navbar = () => {
   return (
     <Nav>
       <Link to={'/'}>
-        <Logo src={logo} alt='Cristian Sánchez blue logo'/>
       </Link>
       <Sections>
         {
           sections.map(section => {
-            if (section.name !== 'Documentation') {
+            if (section.name !== 'Docs') {
               return section.path === useLocation().pathname
                 ? <CustomLink key={section.name} to={section.path} active="false">{section.name}</CustomLink>
                 : <CustomLink key={section.name} to={section.path}>{section.name}</CustomLink>

@@ -1,14 +1,10 @@
 export const sections = [
   {
-    name: 'Contact',
-    path: '/contact'
-  },
-  {
     name: 'Projects',
     path: '/projects'
   },
   {
-    name: 'Documentation',
+    name: 'Docs',
     path: '/docs',
     sections: [
       {
@@ -24,5 +20,9 @@ export const sections = [
         path: '/docs/api'
       }
     ]
+  },
+  {
+    name: 'Contact',
+    path: '/contact'
   }
 ]

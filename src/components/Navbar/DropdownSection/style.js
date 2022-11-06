@@ -29,19 +29,13 @@ export const Dropdown = styled.div`
     }
 `
 
-export const Section = styled.div`
+export const SectionWrapper = styled.div`
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
     height: 100%;
-    width: 100%;
-    color: ${props => props.active ? '#fff' : '#666'}; 
-    text-decoration: none;
-    font-size: 1.08rem;
-    font-family: 'poppins-medium';
-    cursor: pointer;
-    transition: all .15s ease-in-out;
+    width: fit-content;
     margin-inline: 15px;
 
     &:hover ~ ${Dropdown} {
@@ -49,6 +43,28 @@ export const Section = styled.div`
         opacity: 1;
         top: 48px; 
     }
+`
+
+export const Section = styled.div`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    color: ${props => props.active ? `${colors.white}` : `${colors.gray1}`}; 
+    text-decoration: none;
+    font-size: 1.08rem;
+    font-family: 'poppins-medium';
+    cursor: pointer;
+    transition: all .15s ease-in-out;
+`
+
+export const Arrow = styled.img`
+    height: auto; 
+    width: 15px;
+    color: white; 
+    margin-left: 10px; 
 `
 
 export const DropdownWrapper = styled.div`
@@ -61,11 +77,11 @@ export const DropdownWrapper = styled.div`
     align-items: center;
     
     &:hover ${Section}{
-        color: #068DF9;
+        color: ${colors.white};
     }
 `
 
-export const SubSection = styled.div`
+export const SubSection = styled(Link)`
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -74,10 +90,12 @@ export const SubSection = styled.div`
     width: 100%;
     padding: 18px 15px;
     border-radius: 7px;
-    transition: background-color .15s ease-in-out;
+    transition: all .15s ease-in-out;
     cursor: pointer;
+    color: ${colors.white};
+    text-decoration: none; 
     
     &:hover {
-        background-color: #171717;
+        background-color: ${colors.gray3};
     }
 `
