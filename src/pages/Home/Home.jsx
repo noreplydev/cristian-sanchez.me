@@ -11,7 +11,7 @@ import {
 } from './style'
 
 // COMPONENTS
-import { Buttons } from '../../components/Buttons/Buttons.jsx'
+import { Buttons } from '../../components/Home/Buttons/Buttons.jsx'
 
 export const Home = () => {
   return (

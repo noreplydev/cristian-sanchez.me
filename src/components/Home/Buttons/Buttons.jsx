@@ -1,5 +1,5 @@
 import React from 'react'
-import resume from '../../assets/cristian-sanchez-compressed.pdf'
+import resume from '../../../assets/cristian-sanchez-compressed.pdf'
 
 // STYLED COMPONENTS
 import {

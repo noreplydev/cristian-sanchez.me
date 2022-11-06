@@ -17,6 +17,7 @@ export const Title = styled.h2`
 export const Subtitle = styled.h3`
     font-size: 1.8rem;
     font-family: 'poppins-regular', sans-serif;
+    font-weight: 400; 
     color: #fff;
     margin-bottom: 25px; 
 `
