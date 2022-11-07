@@ -11,10 +11,8 @@ export const Nav = styled.nav`
 `
 
 export const Logo = styled.img`
-    height: 40px;
-    width: 40px;
-    background: linear-gradient(135deg, #0a2efa, #01f7fb);
-    border-radius: 20px; 
+    height: auto;
+    width: 150px;
     
     &:hover {
         cursor: pointer;
@@ -30,13 +28,19 @@ export const Sections = styled.div`
 `
 
 export const CustomLink = styled(Link)`
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%; 
+    width: fit-content; 
     color: ${props => props.active ? '#fff' : '#666'}; 
     text-decoration: none;
     font-size: 1.08rem;
     font-family: 'poppins-medium';
     cursor: pointer;
     transition: all .15s ease-in-out;
-    margin-inline: 15px; 
+    margin-inline: 15px;
 
     &:hover {
         color: #fff;

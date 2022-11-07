@@ -13,11 +13,13 @@ import {
 import { DropdownSection } from './DropdownSection/DropdownSection.jsx'
 
 import { sections } from '../../data/sections'
+import logo from '../../assets/images/navbar/logo.svg'
 
 export const Navbar = () => {
   return (
     <Nav>
       <Link to={'/'}>
+        <Logo src={logo} alt='Cristian Sánchez logo'/>
       </Link>
       <Sections>
         {
