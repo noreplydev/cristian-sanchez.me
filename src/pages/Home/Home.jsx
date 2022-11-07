@@ -16,7 +16,6 @@ import { Buttons } from '../../components/Home/Buttons/Buttons.jsx'
 export const Home = () => {
   return (
     <>
-      <FadeOut/>
       <Image src={background} alt="background image of the home section" loading='eager'/>
       <MainSection>
         <Title>Cristian Sánchez</Title>

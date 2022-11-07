@@ -17,27 +17,6 @@ const changeTextGradient = keyframes`
   }
 `
 
-const fadeOutAnimation = keyframes`
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-        visibility: hidden;
-    }
-`
-
-export const FadeOut = styled.section`
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    background-color: #000;
-    z-index: 100;
-    animation: ${fadeOutAnimation} .8s ease-in-out forwards;
-`
-
 export const Image = styled.img`
   position: absolute;
   top: 60%;
