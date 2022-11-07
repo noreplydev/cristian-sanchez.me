@@ -17,6 +17,20 @@ const changeTextGradient = keyframes`
   }
 `
 
+export const Parent = styled.div`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+`
+
+export const Spinner = styled(Lottie)`
+    height: auto; 
+    width: 120px; 
+`
+
 export const Image = styled.img`
   position: absolute;
   top: 60%;
@@ -27,6 +41,7 @@ export const Image = styled.img`
   pointer-events: none;
   -moz-pointer-events: none;
   -webkit-pointer-events: none;
+  z-index: -1;
 `
 
 export const MainSection = styled.section`
