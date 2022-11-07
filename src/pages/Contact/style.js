@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { colors } from '../../data/colors'
 
 export const Parent = styled.section`
     display: flex;
@@ -40,12 +41,13 @@ export const Card = styled.a`
     width: 70px;
     margin-inline: 10px;
     border-radius: 10px; 
-    border: 1px solid #044AFF;
+    border: 1px solid ${colors.gray2};
     background-color: transparent;  
     transition: all .15s ease-in-out; 
     
     &:hover {
-        background-color: rgba(4, 74, 255, .2);
+        background-color: ${colors.rgba.blue}; 
+        border: 1px solid ${colors.blue};
     }
 `
 
