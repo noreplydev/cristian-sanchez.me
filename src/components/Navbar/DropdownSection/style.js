@@ -14,8 +14,9 @@ export const Dropdown = styled.div`
     min-width: 200px;
     padding: 10px 10px;
     margin-right: 5px; 
-    background-color: ${colors.gray2};
+    background-color: ${colors.black};
     border-radius: 10px; 
+    border: 1px solid ${colors.gray2};
     white-space: nowrap;
     z-index: 99999;
     visibility: hidden; 
@@ -89,13 +90,12 @@ export const SubSection = styled(Link)`
     height: 30px; 
     width: 100%;
     padding: 18px 15px;
-    border-radius: 7px;
     transition: all .15s ease-in-out;
     cursor: pointer;
-    color: ${colors.white};
+    color: ${colors.gray0};
     text-decoration: none; 
     
     &:hover {
-        background-color: ${colors.gray3};
+        color: ${colors.white};
     }
 `
