@@ -8,6 +8,7 @@ export const Parent = styled.section`
     align-items: center;
     height: 100%;
     width: 100%;
+    padding-top: 50px; 
 `
 export const Title = styled.h2`
     font-size: 2.8rem;

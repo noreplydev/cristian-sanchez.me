@@ -2,16 +2,19 @@ import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    min-height: 50px; 
-    width: 100%;
+    height: 70px;
+    width: calc(100vw - 100px);
+    z-index: 999999;
+    background-color: rgba(0, 0, 0, 0.97);
 `
 
 export const Logo = styled.img`
-    height: auto;
+    height: fit-content;
     width: 150px;
     
     &:hover {
@@ -24,7 +27,7 @@ export const Sections = styled.div`
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 100%; 
+    height: 100%;
 `
 
 export const CustomLink = styled(Link)`

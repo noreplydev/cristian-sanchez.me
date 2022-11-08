@@ -4,7 +4,7 @@ import { colors } from '../../../data/colors'
 
 export const Dropdown = styled.div`
     position: absolute;
-    top: 40px;
+    top: 50px;
     right: 0px;
     display: flex;  
     flex-direction: column;
@@ -26,7 +26,7 @@ export const Dropdown = styled.div`
     &:hover {
         visibility: visible; 
         opacity: 1;
-        top: 48px; 
+        top: 65px; 
     }
 `
 
@@ -42,7 +42,7 @@ export const SectionWrapper = styled.div`
     &:hover ~ ${Dropdown} {
         visibility: visible; 
         opacity: 1;
-        top: 48px; 
+        top: 65px; 
     }
 `
 

@@ -8,7 +8,10 @@ export const Parent = styled.section`
     align-items: center;
     height: 100%; 
     width: 100%; 
-    padding: 50px 150px; 
+    padding-top: 110px;
+    padding-bottom: 20px;
+    padding-inline: 12%; 
+    aspect-ratio: 16/9; 
     overflow-y: scroll;
     overflow-x: hidden; 
 `
