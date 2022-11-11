@@ -1,11 +1,14 @@
 import React, { useEffect, useState } from 'react'
 import { projects } from '../../data/projects'
-
 // STYLED COMPONENTS
-import { Parent, Container } from './styles'
+import {
+  Parent,
+  Container
+} from './style'
 
 // COMPONENTS
-import { CardMenu } from '../../components/Projects/CardMenu/CardMenu.jsx'
+import { CardContent } from '../../components/Projects/CardMenu/CardContent.jsx'
+import { ImageRenderer } from '../../components/Projects/ImageRenderer/ImageRenderer.jsx'
 
 export const Projects = () => {
   const [cards, setCards] = useState([])
@@ -14,6 +17,7 @@ export const Projects = () => {
     perspective: 1000 // perspective (px)
   }
 
+  // Select all cards from the DOM
   useEffect(() => {
     setCards(document.querySelectorAll('.card'))
   }, [])
@@ -57,10 +61,9 @@ export const Projects = () => {
   return (
     <Parent>
       {
-        projects.map((project, index) => (
+        projects.map((project) => (
           <Container className='card' key={project.projectName}>
-            <CardMenu project={project}/>
-            <img src={project.image} alt='Passlock project dashboard image' loading='eager'/>
+            <ImageRenderer image={project.image} />
           </Container>
         ))
       }

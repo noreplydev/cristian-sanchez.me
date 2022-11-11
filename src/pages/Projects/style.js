@@ -43,23 +43,12 @@ export const Container = styled.div`
         align-items: center;
         height: 100%;
         width: 100%;
-        padding: 50px; 
-        opacity: 0;
+        padding: 50px;
         background-color: rgba(0, 0, 0, 0.0); 
-        transition: opacity .2s ease-in-out;
+        transition: all .2s ease-in-out;
     }
 
     &:hover > div {
-        opacity: 1;
         background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    & > img {
-        position: absolute;
-        object-fit: cover; 
-        height: 100%;
-        width: 100%;
-        z-index: -1;
-        pointer-events: none;
     }
 `
