@@ -19,7 +19,7 @@ export const ImageRenderer = ({ image }) => {
             </div>
           : null
       }
-      <Image src={image} alt='Passlock project dashboard image' loading='eager' onLoad={() => setLoading(prev => !prev)}/>
+      <Image src={image} alt='' loading='eager' onLoad={() => setLoading(prev => !prev)}/>
     </>
   )
 }
