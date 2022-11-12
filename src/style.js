@@ -45,7 +45,7 @@ export const GlobalStyle = createGlobalStyle`
         align-items: flex-start;
         height: 100vh;
         width: 100vw;
-        padding-inline: 50px; 
-        padding-block: 30px; 
+        padding-inline: 10vw; 
+        padding-block: 2vw; 
     }
 `
