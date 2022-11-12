@@ -61,8 +61,8 @@ export const MainCard = ({ project }) => {
   return (
     <Card className='card'>
         <Title>{project.name}</Title>
-        <Desc>Pass manager with shareable workspaces</Desc>
-        <Tool>React</Tool>
+        <Desc>{project.description}</Desc>
+        <Tool>{project.tools}</Tool>
         <Blur>
             <Dona src={circle} alt=''/>
         </Blur>
