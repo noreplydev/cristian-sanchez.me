@@ -20,24 +20,4 @@ export const Grid = styled.div`
     height: 100%; 
     min-width: 100%;
     padding: 30px; 
-
-    & > .cell {
-        border-radius: 10px; 
-        border: 1px solid #282828; 
-    }
-
-    & > div:first-child {
-        grid-column: 1 / 2; 
-        grid-row: 1 / 2; 
-    }
-
-    & > div {
-        grid-column: 2 / 2;
-        grid-row: 1 / span 2;
-    }
-
-    & > div:last-child {
-        grid-column: 1 / 2; 
-        grid-row: 2 / 2;
-    }
 `

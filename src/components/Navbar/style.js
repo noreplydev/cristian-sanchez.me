@@ -43,7 +43,6 @@ export const CustomLink = styled(Link)`
     font-family: 'poppins-medium';
     cursor: pointer;
     transition: all .15s ease-in-out;
-    margin-inline: 15px;
 
     &:hover {
         color: #fff;

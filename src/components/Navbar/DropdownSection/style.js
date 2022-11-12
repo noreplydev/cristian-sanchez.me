@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components'
+import styled from 'styled-components'
 import { Link } from 'react-router-dom'
 import { colors } from '../../../data/colors'
 
@@ -21,7 +21,7 @@ export const Dropdown = styled.div`
     z-index: 99999;
     visibility: hidden; 
     opacity: 0;
-    transition: visibility 0s, opacity .2s, top .2s linear;
+    transition: visibility 0s, opacity .12s, top .12s linear;
 
     &:hover {
         visibility: visible; 
@@ -37,7 +37,7 @@ export const SectionWrapper = styled.div`
     align-items: center;
     height: 100%;
     width: fit-content;
-    margin-inline: 15px;
+    margin-inline: 30px;
 
     &:hover ~ ${Dropdown} {
         visibility: visible; 
