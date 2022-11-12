@@ -7,8 +7,7 @@ import {
 } from './style'
 
 // COMPONENTS
-import { CardContent } from '../../components/Projects/CardMenu/CardContent.jsx'
-import { ImageRenderer } from '../../components/Projects/ImageRenderer/ImageRenderer.jsx'
+import { CardRenderer } from '../../components/Projects/CardRenderer/CardRenderer.jsx'
 
 export const Projects = () => {
   const [cards, setCards] = useState([])
@@ -63,7 +62,7 @@ export const Projects = () => {
       {
         projects.map((project) => (
           <Container className='card' key={project.projectName}>
-            <ImageRenderer image={project.image} />
+            <CardRenderer project={project} />
           </Container>
         ))
       }

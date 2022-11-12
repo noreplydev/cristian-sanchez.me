@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { CustomLink } from '../../components/Projects/CardRenderer/style'
 
 export const Parent = styled.section`
     position: relative;
@@ -50,5 +51,9 @@ export const Container = styled.div`
 
     &:hover > div {
         background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    &:hover ${CustomLink} {
+        opacity: 1; 
     }
 `

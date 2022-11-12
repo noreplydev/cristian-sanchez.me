@@ -6,7 +6,7 @@ export const projects = [
   {
     projectName: 'Passlock',
     image: passlock,
-    link: 'https://pass-manager.nine.vercel.app/'
+    link: 'https://pass-manager-nine.vercel.app/'
   },
   {
     projectName: 'EasyIP',

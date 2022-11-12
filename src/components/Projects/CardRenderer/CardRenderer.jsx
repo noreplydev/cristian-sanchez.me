@@ -3,11 +3,12 @@ import spinner from '../../../assets/json/spinner.json'
 
 // styled components
 import {
-  Image,
-  Spinner
+  Spinner,
+  CustomLink,
+  Image
 } from './style'
 
-export const ImageRenderer = ({ image }) => {
+export const CardRenderer = ({ project }) => {
   const [loading, setLoading] = useState(true)
 
   return (
@@ -19,7 +20,10 @@ export const ImageRenderer = ({ image }) => {
             </div>
           : null
       }
-      <Image src={image} alt='' loading='eager' onLoad={() => setLoading(prev => !prev)}/>
+      <div>
+        <CustomLink href={project.link} target='_blank'>{project.projectName}</CustomLink>
+      </div>
+      <Image src={project.image} alt='' loading='eager' onLoad={() => setLoading(prev => !prev)}/>
     </>
   )
 }
