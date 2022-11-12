@@ -1,8 +1,14 @@
 import React, { useEffect, useState } from 'react'
+import circle from '../../../assets/images/projects/blue-dona.svg'
 
 // STYLED COMPONENTS
 import {
-  Card
+  Card,
+  Title,
+  Desc,
+  Tool,
+  Blur,
+  Dona
 } from './style'
 
 export const MainCard = ({ project }) => {
@@ -54,7 +60,12 @@ export const MainCard = ({ project }) => {
 
   return (
     <Card className='card'>
-        <h2>{project.name}</h2>
+        <Title>{project.name}</Title>
+        <Desc>Pass manager with shareable workspaces</Desc>
+        <Tool>React</Tool>
+        <Blur>
+            <Dona src={circle} alt=''/>
+        </Blur>
     </Card>
   )
 }
