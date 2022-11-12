@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { CustomLink } from '../../components/Projects/CardRenderer/style'
 
 export const Parent = styled.section`
     position: relative;
@@ -9,51 +8,16 @@ export const Parent = styled.section`
     align-items: center;
     height: 100%; 
     width: 100%; 
-    padding-top: 110px;
-    padding-bottom: 20px;
-    padding-inline: 12%; 
-    aspect-ratio: 16/9; 
-    overflow-y: scroll;
-    overflow-x: hidden; 
+    padding-top: 70px;
 `
 
-export const Container = styled.div`
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 100%;
-    width: 100%;
-    border-radius: 15px;  
-    overflow: hidden;
-    z-index: 1;
-    background-color: #000;
-    margin-bottom: 30px; 
-    transform-style: preserve-3d;
-
-    &:hover {
-        border: 1px solid #fff;
-    }
-
-    & > div {
-        position: relative; 
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100%;
-        width: 100%;
-        padding: 50px;
-        background-color: rgba(0, 0, 0, 0.0); 
-        transition: all .2s ease-in-out;
-    }
-
-    &:hover > div {
-        background-color: rgba(0, 0, 0, 0.8);
-    }
-
-    &:hover ${CustomLink} {
-        opacity: 1; 
-    }
+export const Grid = styled.div`
+    position: relative; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr 1fr; 
+    grid-gap: 20px; 
+    height: 100%; 
+    min-width: 100%;
+    padding: 30px; 
 `

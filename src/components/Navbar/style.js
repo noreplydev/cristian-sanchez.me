@@ -8,7 +8,7 @@ export const Nav = styled.nav`
     justify-content: space-between;
     align-items: center;
     height: 70px;
-    width: calc(100vw - 100px);
+    width: calc(100vw - 20vw);
     z-index: 999999;
     background-color: rgba(0, 0, 0, 0.97);
 `
@@ -43,7 +43,6 @@ export const CustomLink = styled(Link)`
     font-family: 'poppins-medium';
     cursor: pointer;
     transition: all .15s ease-in-out;
-    margin-inline: 15px;
 
     &:hover {
         color: #fff;
