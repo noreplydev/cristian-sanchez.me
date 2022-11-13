@@ -77,6 +77,12 @@ export const DropdownWrapper = styled.div`
     justify-content: center;
     align-items: center;
     
+    &:hover ${Dropdown}{
+        visibility: visible; 
+        opacity: 1;
+        top: 65px; 
+    }
+
     &:hover ${Section}{
         color: ${colors.white};
     }

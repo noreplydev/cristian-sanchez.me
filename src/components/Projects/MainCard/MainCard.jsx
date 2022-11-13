@@ -14,7 +14,7 @@ import {
 export const MainCard = ({ project }) => {
   const [card, setCards] = useState()
   const tilt = {
-    maxDeg: 15, // max tilt rotation (degrees (deg))
+    maxDeg: 20, // max tilt rotation (degrees (deg))
     perspective: 1000 // perspective (px)
   }
 
@@ -46,8 +46,8 @@ export const MainCard = ({ project }) => {
       const mouseY = event.clientY - centerY
 
       // idk
-      const rotateX = (+1) * (mouseY / (cardHeight / 0.5)) * tilt.maxDeg
-      const rotateY = (-1) * (mouseX / (cardWidth / 0.5)) * tilt.maxDeg
+      const rotateX = (+1) * (mouseY / (cardHeight * 2)) * tilt.maxDeg
+      const rotateY = (-1) * (mouseX / (cardWidth * 2)) * tilt.maxDeg
 
       card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
     })
@@ -60,12 +60,12 @@ export const MainCard = ({ project }) => {
 
   return (
     <Card className='card'>
-        <Title>{project.name}</Title>
-        <Desc>{project.description}</Desc>
-        <Tool>{project.tools}</Tool>
-        <Blur>
-            <Dona src={circle} alt=''/>
-        </Blur>
+      <Title href={project.link} target='_blank'>{project.name}</Title>
+      <Desc>{project.description}</Desc>
+      <Tool>{project.tools}</Tool>
+      <Blur>
+        <Dona src={circle} alt=''/>
+      </Blur>
     </Card>
   )
 }

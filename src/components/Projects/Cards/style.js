@@ -18,7 +18,7 @@ export const Card = styled.div`
     }
 `
 
-export const Title = styled.h2`
+export const Title = styled.a`
     display: flex; 
     flex-direction: column; 
     justify-content: flex-end; 
@@ -27,6 +27,11 @@ export const Title = styled.h2`
     color: #fff; 
     font-size: 4rem; 
     font-family: 'poppins-semibold'; 
+    text-decoration: none; 
+
+    &:hover {
+        text-decoration: underline; 
+    }
 `
 
 export const Desc = styled.p`
