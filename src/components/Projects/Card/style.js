@@ -26,6 +26,8 @@ export const Parent = styled.div`
     flex-direction: column; 
     justify-content: flex-start;  
     align-items: flex-start;
+    grid-column: 1;
+    grid-row: ${props => props.z}; 
     padding-block: 1px; 
     padding-inline: 1px;  
     border-radius: 10px; 
@@ -72,7 +74,7 @@ export const Title = styled.p`
     font-family: 'poppins-semibold';
     margin-left: 20px;
     padding-inline: 10px; 
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .7);
 `
 
 export const Desc = styled.p`
@@ -83,5 +85,5 @@ export const Desc = styled.p`
     margin-bottom: 10px; 
     color: #fff; 
     padding-inline: 10px; 
-    background-color: rgba(0, 0, 0, .6);
+    background-color: rgba(0, 0, 0, .7);
 `

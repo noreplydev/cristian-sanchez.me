@@ -8,9 +8,9 @@ import {
   Tool
 } from './style'
 
-export const Card = ({ project, top = false }) => {
+export const Card = ({ project, z }) => {
   return (
-    <Parent image={project.image} top>
+    <Parent image={project.image} z={z}>
       <Tool>{project.tools}</Tool>
       <div>
         <Title href={project.link} target='_blank'>{project.name}</Title>

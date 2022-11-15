@@ -8,8 +8,8 @@ import { MainCard } from '../MainCard/MainCard.jsx'
 export const Cards = () => {
   return (
     <>
-      <Card project={projects[1]}/>
-      <Card project={projects[2]}/>
+      <Card project={projects[1]} z={1}/>
+      <Card project={projects[2]} z={2}/>
       <MainCard project={projects[0]}/>
     </>
   )
