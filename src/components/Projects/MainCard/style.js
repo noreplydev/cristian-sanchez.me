@@ -25,7 +25,6 @@ export const Card = styled.div`
     @media ( max-width: 700px ) {
         grid-column: 1;
         grid-row: 1;
-        margin-top: 30px; 
     }
 
     & > * {

@@ -20,12 +20,14 @@ export const Grid = styled.div`
     grid-gap: 20px; 
     height: 100%; 
     min-width: 100%;
-    padding: 30px; 
-    padding-bottom: 150px; 
+    padding-inline: 30px; 
+    padding-block: 30px; 
     overflow: scroll;
 
     @media (max-width: 700px) {
         grid-template-columns: 1fr; 
         grid-template-rows: 400px 400px 400px;
+        padding-top: 70px;
+        padding-bottom: 150px;  
     }
 `

@@ -15,11 +15,11 @@ export const App = () => {
       <GlobalStyle />
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home/>} />
-        <Route path="/projects" element={<Projects/>} />
-        <Route path="/contact" element={<Contact/>} />
-        <Route path="/docs" element={<div>docs</div>} />
-        <Route path="*" element={<div>error</div>} />
+        <Route exact path="/" element={<Home/>} />
+        <Route exact path="/projects" element={<Projects/>} />
+        <Route exact path="/contact" element={<Contact/>} />
+        <Route exact path="/docs" element={<div>docs</div>} />
+        <Route path="*" element={<Contact />} />
       </Routes>
     </BrowserRouter>
   )
