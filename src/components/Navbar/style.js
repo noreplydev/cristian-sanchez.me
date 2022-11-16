@@ -3,14 +3,22 @@ import { Link } from 'react-router-dom'
 
 export const Nav = styled.nav`
     position: fixed;
+    top: 0px; 
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 90px;
+    padding-top: 20px; 
     width: calc(100vw - 20vw);
     z-index: 999999;
-    background-color: rgba(0, 0, 0, 0.97);
+    background-color: #000;
+
+    @media (max-width: 700px) {
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
+
 `
 
 export const Logo = styled.img`
@@ -20,6 +28,10 @@ export const Logo = styled.img`
     &:hover {
         cursor: pointer;
     }
+
+    @media (max-width: 700px) {
+        width: 120px;
+    }
 `
 
 export const Sections = styled.div`
@@ -28,6 +40,10 @@ export const Sections = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 100%;
+
+    @media (max-width: 700px) {
+        display: none; 
+    }
 `
 
 export const CustomLink = styled(Link)`

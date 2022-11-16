@@ -16,7 +16,7 @@ export const Tool = styled.p`
     border-top-left-radius: 10px; 
     border-top-right-radius: 9px; 
     box-shadow: 0px 0px 0px 1px #282828;
-    background-color: rgba(0, 0, 0, .9);;
+    background-color: rgba(0, 0, 0,1);;
     transition: all .2s ease-in-out; 
     z-index: 999; 
 `
@@ -49,6 +49,11 @@ export const Parent = styled.div`
         box-shadow: 0px 0px 0px 1px #0044ff;
     }
 
+    @media ( max-width: 700px ) {
+        grid-column: 1;
+        grid-row: ${props => props.row};
+    }
+
     //style title & desc container
     & > div {
         display: flex; 
@@ -57,6 +62,7 @@ export const Parent = styled.div`
         align-items: flex-start; 
         height: 100%; 
         width: 100%; 
+        padding: 20px; 
         border-bottom-left-radius: 9px; 
         border-bottom-right-radius: 9px;
         background-color: rgba(0, 0, 0, .6);
@@ -72,7 +78,6 @@ export const Title = styled.p`
     color: #fff; 
     font-size: 1.3rem; 
     font-family: 'poppins-semibold';
-    margin-left: 20px;
     padding-inline: 10px; 
     background-color: rgba(0, 0, 0, .7);
 `
@@ -81,8 +86,6 @@ export const Desc = styled.p`
     font-size: 1.15rem; 
     font-family: 'poppins-regular', sans-serif; 
     font-weight: 400; 
-    margin-left: 20px; 
-    margin-bottom: 10px; 
     color: #fff; 
     padding-inline: 10px; 
     background-color: rgba(0, 0, 0, .7);

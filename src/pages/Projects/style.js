@@ -8,7 +8,8 @@ export const Parent = styled.section`
     align-items: center;
     height: 100%; 
     width: 100%; 
-    padding-top: 70px;
+    padding-top: 50px;
+    margin-bottom: 30px;  
 `
 
 export const Grid = styled.div`
@@ -20,4 +21,11 @@ export const Grid = styled.div`
     height: 100%; 
     min-width: 100%;
     padding: 30px; 
+    padding-bottom: 150px; 
+    overflow: scroll;
+
+    @media (max-width: 700px) {
+        grid-template-columns: 1fr; 
+        grid-template-rows: 400px 400px 400px;
+    }
 `

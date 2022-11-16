@@ -26,7 +26,7 @@ export const Dropdown = styled.div`
     &:hover {
         visibility: visible; 
         opacity: 1;
-        top: 65px; 
+        top: 55px; 
     }
 `
 
@@ -42,7 +42,7 @@ export const SectionWrapper = styled.div`
     &:hover ~ ${Dropdown} {
         visibility: visible; 
         opacity: 1;
-        top: 65px; 
+        top: 55px; 
     }
 `
 
@@ -80,7 +80,7 @@ export const DropdownWrapper = styled.div`
     &:hover ${Dropdown}{
         visibility: visible; 
         opacity: 1;
-        top: 65px; 
+        top: 55px; 
     }
 
     &:hover ${Section}{

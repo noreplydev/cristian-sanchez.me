@@ -22,6 +22,12 @@ export const Card = styled.div`
         background-color: #050505; 
     }
 
+    @media ( max-width: 700px ) {
+        grid-column: 1;
+        grid-row: 1;
+        margin-top: 30px; 
+    }
+
     & > * {
         z-index: 1; 
     }
