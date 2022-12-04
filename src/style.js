@@ -34,8 +34,10 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
+        position: relative; 
         background-color: #000; 
         font-size: 16px;
+        overflow: hidden; 
     }
 
     #root {
@@ -47,5 +49,10 @@ export const GlobalStyle = createGlobalStyle`
         width: 100vw;
         padding-inline: 10vw; 
         padding-block: 2vw; 
+        overflow: hidden; 
+
+        @media (max-width: 700px) {
+            padding-inline: 5vw; 
+        }
     }
 `
