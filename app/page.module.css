@@ -1,0 +1,75 @@
+.mainContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  width: 100%;
+  height: calc(100vh - 90px);
+}
+
+.title {
+  font-family: var(--sora);
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.subtitle {
+  font-family: var(--sora);
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin-bottom: 1rem;
+  z-index: 3;
+  pointer-events: none;
+}
+
+.grid {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  display: grid;
+  grid-template-columns: repeat(18, 1fr);
+  grid-template-rows: repeat(13, 1fr);
+  width: 100%;
+  height: 100%; 
+  z-index: 1;
+}
+
+.overlay {
+  position: absolute; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; 
+  background-color: transparent;
+  box-shadow: inset 0px 1px 50vh 30vh#fff;
+  z-index: 2;
+  pointer-events: none;
+}
+
+.item {
+  opacity: 0.5;
+  border: 1px solid #d9d9d9;
+  transition: all 0.10s ease;
+}
+
+.item:hover {
+  background-color: #d9d9d9;
+  animation: disappear 1.5s ease forwards; 
+}
+
+@keyframes disappear {
+  0% {
+    background-color: #d9d9d9;
+  }
+  60% {
+    background-color: #d9d9d9;
+  }
+  100% {
+    background-color: transparent;
+  } 
+}
