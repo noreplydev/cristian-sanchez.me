@@ -1,11 +1,6 @@
-import { sections } from '@/data/sections'
-import Link from 'next/link'
-
 import { Sora } from 'next/font/google'
+import Nav from '@/components/homepage/Nav'
 import './globals.css'
-
-import github from '@/assets/github.png'
-import Image from 'next/image'
 
 export const metadata = {
   title: 'Cristin Sánchez',
@@ -28,21 +23,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={sora.variable} >
         <header>
-          <nav>
-            <Image src={github} className='github'  alt="github" />
-            <ul>
-              {
-                sections.map((section) => {
-                  return (
-                    <li key={section.name}>
-                      <Link href={section.path}>{section.name}</Link>
-                    </li>
-                  )
-                })
-              }
-            </ul>
-          </nav>
+          <Nav/>
         </header>
+        <div className="blur"/>
         {children}
       </body>
     </html>

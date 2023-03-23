@@ -1,12 +1,23 @@
 .mainContainer {
+  width: 100%;
+  height: fit-content;
   position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #000;
+  overflow-y: scroll;
+}
+
+.firstSection {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: calc(100vh - 90px);
+  background-color: transparent;
 }
 
 .title {
@@ -52,22 +63,21 @@
 }
 
 .item {
-  opacity: 0.5;
-  border: 1px solid #d9d9d9;
+  box-shadow: inset 0px 0px 0px 0.1vh #ececec; 
   transition: all 0.10s ease;
 }
 
 .item:hover {
-  background-color: #d9d9d9;
+  background-color: #ececec;
   animation: disappear 1.5s ease forwards; 
 }
 
 @keyframes disappear {
   0% {
-    background-color: #d9d9d9;
+    background-color: #ececec;
   }
   60% {
-    background-color: #d9d9d9;
+    background-color: #ececec;
   }
   100% {
     background-color: transparent;
