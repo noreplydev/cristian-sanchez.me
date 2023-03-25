@@ -27,6 +27,7 @@
   margin-bottom: 1rem;
   z-index: 3;
   pointer-events: none;
+  text-align: center;
 }
 
 .subtitle {
@@ -82,4 +83,18 @@
   100% {
     background-color: transparent;
   } 
+}
+
+@media (max-width: 768px) {
+  .firstSection {
+    height: calc(100vh - 100px);
+  }
+  
+  .overlay {
+    display: none; 
+  }
+
+  .grid {
+    display: none; 
+  }
 }

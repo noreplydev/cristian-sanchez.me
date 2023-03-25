@@ -26,7 +26,20 @@
   grid-template-columns: 1fr 1fr; 
   grid-template-rows: 1fr 1fr; 
   gap: 25px; 
-  height: 70vh;
+  height: 100vh;
   width: 100%;
   margin-bottom: 100px; 
 }
+
+
+@media (max-width: 768px) {
+  .parentContainer {
+    padding: 0 5vw; 
+  }
+
+  .recentsContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr; 
+  }
+}
+

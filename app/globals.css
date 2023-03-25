@@ -93,3 +93,13 @@ a {
   color: inherit;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+  header {
+    padding: 0 3vh;
+  }
+
+  ul {
+    display: none; 
+  }
+}
