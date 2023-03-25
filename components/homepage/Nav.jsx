@@ -15,7 +15,7 @@ export default function Nav() {
       scroll = window.pageYOffset;
 
       if (scroll > 0) {
-        nav.style.boxShadow = '0 1px 0px 0 #ececec'
+        nav.style.boxShadow = '0 1px 0px 0 var(--gray)'
       } else {
         nav.style.boxShadow = 'none'
       }

@@ -1,0 +1,64 @@
+.main {
+  grid-row: 1 / 2;
+  grid-column: 1 / span 2;
+  background-color: var(--gray);
+}
+
+.left {
+  grid-row: 2 / span 2;  
+  grid-column: 1 / span 1;
+  background-color: var(--gray);
+}
+
+.right {
+  grid-row: 2 / span 2;  
+  grid-column: 2 / span 1;
+  background-color: var(--gray);
+}
+
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  padding: 25px; 
+  transition: all 0.2s ease-in-out;  
+  box-shadow: 0px 0px 0px 1px var(--gray); 
+}
+
+.card:hover {
+  box-shadow: 0px 0px 0px 1px #000; 
+}
+
+.title {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 10px; 
+}
+
+.topics {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--vibrant-blue);
+}
+
+.banner {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  height: auto;
+  width: 180px; 
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.date {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 25px;
+  font-size: 1rem;
+  font-weight: 400;
+}

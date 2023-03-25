@@ -1,3 +1,4 @@
+import BlogGrid from '@/components/homepage/BlogGrid'
 import style from './page.module.css'
 
 export default function Home() {
@@ -15,6 +16,7 @@ export default function Home() {
           }
         </div>
       </section> 
+      <BlogGrid/>
     </main>
   )
 }

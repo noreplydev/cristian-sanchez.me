@@ -1,0 +1,32 @@
+.parentContainer {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start; 
+  padding: 0 30vw; 
+  background-color: var(--background-color);
+}
+
+.title {
+  font-size: 3.5rem;
+  font-weight: 600;
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  margin-left: 20px; 
+  margin-bottom: -30px;
+  z-index: 1;
+}
+
+.recentsContainer {
+  display: grid; 
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 1fr 1fr; 
+  gap: 25px; 
+  height: 70vh;
+  width: 100%;
+  margin-bottom: 100px; 
+}

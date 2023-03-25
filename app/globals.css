@@ -1,11 +1,17 @@
 :root {
   --background-color: #fff;
+  --background-reverse: #000;
+  --vibrant-blue: #0057ff;
   --gray: #ececec;
+  --text: #000;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #fff; 
+    --background-color: #fff;   
+    --background-reverse: #000;
+    --gray: #ececec;
+    --text: #000000;
   }
 }
 
@@ -14,6 +20,8 @@
   padding: 0;
   margin: 0;
   font-size: 17px;
+  font-family: var(--sora);
+  color: var(--text);
 }
 
 html,
@@ -47,7 +55,7 @@ header {
   width: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: saturate(60%) blur(4px);
+  backdrop-filter: saturate(160%) blur(4px);
   z-index: 40;
 }
 
