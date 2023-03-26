@@ -108,3 +108,30 @@
   font-family: var(--source-code-pro);
   color: var(--text-reverse);
 }
+
+@media (min-width: 1900px) {
+  .h1 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  .h2 {
+    font-size: 1.7rem;
+    margin-bottom: 15px;
+  }
+  .h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+  .p {
+    font-size: 1.1rem;
+    margin-bottom: 30px; 
+  }
+  .blockquote > p {
+    font-size: 1.1rem;
+  }
+  .code > * {
+    font-size: 1rem;
+    font-family: var(--source-code-pro);
+    color: var(--text-reverse);
+  }
+}

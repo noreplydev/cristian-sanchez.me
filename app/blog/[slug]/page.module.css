@@ -35,3 +35,25 @@
   font-weight: 400;
   color: var(--text);
 }
+
+@media (max-width: 768px) {
+  .parentContainer {
+    padding: 0 5vw; 
+  }
+  
+  .title {
+    font-weight: 700;
+    margin-block: 50px 10px; 
+    padding: 20px 40px;
+  }
+}
+
+@media (min-width: 1900px) {
+  .parentContainer {
+    padding: 0 25vw;
+  }
+  .title {
+    font-size: 3.5rem;
+    padding: 70px 200px;
+  }
+}
