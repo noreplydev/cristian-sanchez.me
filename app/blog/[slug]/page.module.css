@@ -1,0 +1,125 @@
+.parentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 100%;
+  height: fit-content;   
+  padding: 0 20vw; 
+}
+
+.title {
+  width: 100%;
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--text-reverse);
+  background-color: var(--background-reverse);
+  margin-block: 50px 10px; 
+  padding: 60px 150px;
+  border-radius: 10px;
+}
+
+.detailsContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: fit-content;
+  margin-bottom: 50px; 
+}
+
+.detailsContainer > p {
+  font-size: 1.1rem;
+  font-weight: 400;
+  color: var(--text);
+}
+
+/* CUSTOM COMPONENTS FOR MARKDOWN FILES */
+.h1 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 15px;
+}
+
+.h2 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
+.p {
+  width: 100%;
+  text-align: justify;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  margin-bottom: 30px; 
+}
+.ul {
+  display: block;
+  list-style-type: disc;
+  list-style-position: inside;
+  margin-bottom: 30px; 
+  z-index: -1;
+}
+
+.li {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  z-index: 0;
+}
+
+.img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 30px 0;
+}
+
+.a {
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--text);
+  text-decoration: underline; 
+}
+
+.strong {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+}
+
+.blockquote {
+  width: 100%;
+  height: fit-content;
+  padding: 15px; 
+  background-color: var(--notice);
+  border-radius: 10px; 
+  margin-bottom: 30px; 
+}
+
+.blockquote > p {
+  padding: 0px; 
+  margin: 0px; 
+}
+
+.code {
+  width: 100%;
+  height: fit-content;
+  padding: 15px; 
+  background-color: var(--background-reverse);
+  border-radius: 10px; 
+  margin-bottom: 30px; 
+}

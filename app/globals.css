@@ -4,6 +4,8 @@
   --vibrant-blue: #0057ff;
   --gray: #ececec;
   --text: #000;
+  --text-reverse: #fff;
+  --notice: #ffb031; 
 }
 
 @media (prefers-color-scheme: dark) {
