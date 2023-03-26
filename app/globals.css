@@ -6,6 +6,9 @@
   --text: #000;
   --text-reverse: #fff;
   --notice: #ffb031; 
+  --notice-background: #ffb03137;
+  --code-snipet-background: #1D1F21; 
+  --code-snipet-line: #3F3F3F;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,7 +85,6 @@ ul {
   list-style: none;
   font-family: var(--sora);
   font-weight: 400;
-
   z-index: 1001;
 }
 

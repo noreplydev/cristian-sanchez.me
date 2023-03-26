@@ -1,4 +1,4 @@
-import { Sora } from 'next/font/google'
+import { Sora, DM_Mono } from 'next/font/google'
 import Nav from '@/components/homepage/Nav'
 import './globals.css'
 
@@ -12,6 +12,12 @@ const sora = Sora({
   subsets: ['latin'],
 })
 
+const dmMono = DM_Mono({ 
+  variable: '--dm-mono',
+  weight: ['300', '400', '500'], 
+  subsets: ['latin'],
+})
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -21,7 +27,7 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <title>{metadata.title}</title>
       </head>
-      <body className={sora.variable} >
+      <body className={`${sora.variable} ${dmMono.variable}`} >
         <header>
           <Nav/>
         </header>
