@@ -15,21 +15,8 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat aliquam 
 
 At the age of 13 I was able to buy my first desktop computer, this triggered me to sign up for a professional java training and to start using different programs. Two years later I finished my training and got a degree in java developer. Now, being 16 years old, I have already developed an android application, while I study I am working on other projects like:
 
-```example.js
-const Code = ({className, ...props}) => {
-  const filename = className.split('-')[1] // get the filename from the className 
-
-  return (
-    <pre>
-      <div className={style.codeTopBar}>
-        <span></span>
-        <p>{filename}</p>
-        <span>copy</span>
-      </div>
-      <code className={style.code}>{props.children}</code>
-    </pre>
-  )
-}
+```jsx
+console.log('new post code block')
 ```
 
-At the age of 13 I was able to buy my first desktop computer, this triggered me to sign up for a professional java training and to start using different programs. Two years later I finished my training and got a degree in java developer. Now, being 16 years old, I have already developed an android application, while I study I am working on other projects like:
+At the `age` of 13 I was able to buy my first desktop computer, this triggered me to sign up for a professional java training and to start using different programs. Two years later I finished my training and got a degree in java developer. Now, being 16 years old, I have already developed an android application, while I study I am working on other projects like:

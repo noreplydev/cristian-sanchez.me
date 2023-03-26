@@ -1,20 +1,5 @@
+import CodeBlock from './CodeBlock'
 import style from './markdownComponents.module.css'
-
-const Code = ({className, ...props}) => {
-  const filename = className.split('-')[1] // get the filename from the className 
-
-  return (
-    <pre>
-      <div className={style.codeTopBar}>
-        <div></div>
-        <p>{filename}</p>
-      </div>
-      <div className={style.codeWrapper}>
-        <code className={style.code}>{props.children}</code>
-      </div> 
-    </pre>
-  )
-}
 
 export const MarkdownComponents = {
   h1: ({node, ...props}) => <h1 className={style.h1} {...props} />, 
@@ -28,5 +13,5 @@ export const MarkdownComponents = {
   bold: ({node, ...props}) => <strong className={style.strong} {...props} />,
   blockquote: ({node, ...props}) => <blockquote className={style.blockquote} {...props} />, 
   pre: ({node, ...props}) => <pre className={style.pre} {...props} />,
-  code: ({...props}) => <Code {...props} />,
+  code: ({...props}) => props.className ? <CodeBlock {...props} /> : <code className={style.code} {...props} />,
 }
