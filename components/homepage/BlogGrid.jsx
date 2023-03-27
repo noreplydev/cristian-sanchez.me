@@ -2,6 +2,8 @@ import fs from 'fs'
 import style from './blogGrid.module.css'
 import matter from 'gray-matter'
 import PostCard from './PostCard.jsx'
+import Image from 'next/image'
+import asterisk from '@/assets/asterisk.svg'
 
 const getPostsMetadata = () => {
   const files = fs.readdirSync('posts/') // get all the files in the posts folder
@@ -25,6 +27,8 @@ export default function BlogGrid () {
   console.table(mostRecentPosts)
   return (
     <section className={style.parentContainer} >
+      <Image src={asterisk} alt="Background asterisk image" className={style.asterisk}/>
+      <Image src={asterisk} alt="Background asterisk image" className={style.asterisk}/>
       <h2 className={style.title}>Blog</h2>
       <div className={style.recentsContainer}>
         {

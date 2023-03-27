@@ -12,6 +12,17 @@ const getPostContent = (slug) => {
   return { data, content}
 }
 
+export function getStaticPaths() {
+  const slugs = fs.readdirSync('posts')
+    .map((file) => {
+      return { 
+        params: { slug: file.replace('.md', '') }
+      } 
+    })
+
+  return { paths: slugs, fallback: false }
+}
+
 export default function Post(props) {
   const slug = props.params.slug
   const {data, content} = getPostContent(slug)

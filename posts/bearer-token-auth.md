@@ -15,7 +15,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin volutpat aliquam 
 
 At the age of 13 I was able to buy my first desktop computer, this triggered me to sign up for a professional java training and to start using different programs. Two years later I finished my training and got a degree in java developer. Now, being 16 years old, I have already developed an android application, while I study I am working on other projects like:
 
-```jsx
+```js
 console.log('new post code block')
 ```
 

@@ -32,6 +32,29 @@
 }
 
 
+.asterisk{
+  position: absolute;
+  height: auto;
+  width: 20vw;
+  z-index: 0;
+  opacity: 0.4;
+}
+
+.asterisk:first-child {
+  top: 0%;
+  left: 5%;  
+  transform: translate(-50%, -50%);
+  transform: rotate(52deg);
+}
+
+.asterisk:nth-child(even) {
+  scale: 1.3;
+  top: 40%;
+  right: 10%;
+  transform: translate(-50%, -50%);
+  transform: rotate(-60deg);
+}
+
 @media (max-width: 768px) {
   .parentContainer {
     padding: 0 5vw; 
@@ -41,6 +64,10 @@
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr; 
     height: 100vh;
+  }
+
+  .asterisk {
+    display: none;
   }
 }
 

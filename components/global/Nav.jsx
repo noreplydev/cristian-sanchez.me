@@ -6,7 +6,7 @@ import Link from "next/link"
 
 import { sections } from "@/data/sections"
 
-import github from '@/assets/github.png'
+import logo from '@/assets/logo.svg'
 
 
 export default function Nav() {
@@ -31,7 +31,9 @@ export default function Nav() {
   
   return (
     <nav>
-      <Image src={github} className='github'  alt="github" />
+      <Link href="/">
+        <Image src={logo} className='logo'  alt="Cristian Sánchez logo" />
+      </Link> 
       <ul>
         {
           sections.map((section) => {
