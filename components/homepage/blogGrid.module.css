@@ -37,7 +37,8 @@
   height: auto;
   width: 20vw;
   z-index: 0;
-  opacity: 0.4;
+  opacity: 0.2;
+  filter: blur(4px); 
 }
 
 .asterisk:first-child {
