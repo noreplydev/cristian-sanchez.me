@@ -24,7 +24,6 @@ export default function BlogGrid () {
   const mostRecentPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3)
   const classes = ['main', 'left', 'right']
   
-  console.table(mostRecentPosts)
   return (
     <section className={style.parentContainer} >
       <Image src={asterisk} alt="Background asterisk image" className={style.asterisk}/>

@@ -12,9 +12,10 @@ const getPostContent = (slug) => {
   return { data, content}
 }
 
-export default function Post(props) {
-  const slug = props.params.slug
+export default function Post({params}) {
+  const {slug} = params
   const {data, content} = getPostContent(slug)
+
   return (
     <div className={style.parentContainer}>
       <h1 className={style.title}>{data.title}</h1>

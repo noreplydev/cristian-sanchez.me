@@ -2,8 +2,6 @@ import Link from 'next/link'
 import style from './postCard.module.css'
 
 export default function PostCard ({ className, post }) {
-  console.log(className)
-  console.log(style[className])
   return (
     <Link href={`blog/${post.slug}`} className={`${style[className]} ${style.card}`} >
       <h3 className={style.title}>{post.title}</h3>
