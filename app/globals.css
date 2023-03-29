@@ -40,6 +40,7 @@ body {
   display: block;
   background-color: var(--background-color);
   padding-top: 90px; 
+  overflow-x: hidden;
   overflow-y: scroll;
 }
 
