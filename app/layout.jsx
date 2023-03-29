@@ -30,6 +30,9 @@ export default function RootLayout({ children }) {
       </head>
       <body className={`${sora.variable} ${sourceCodePro.variable}`} >
         <header>
+          <div className='advice'>
+          🚧 This web is under construction, go to <a href="https://old.cristian-sanchez.me">old.cristian-sanchez.me</a>
+          </div>
           <Nav/>
         </header>
         <div className="blur"/>

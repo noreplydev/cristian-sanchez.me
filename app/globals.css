@@ -48,7 +48,6 @@ header {
   background-color: transparent;
   height: 90px;
   width: 100%;
-  padding: 0 5vh; 
   top: 0;
   left: 0;
   z-index: 50;
@@ -58,6 +57,7 @@ header {
   position: fixed;
   opacity: 1;
   background-color: rgba(255, 255, 255, 0.5);
+  margin-top: 60px; 
   height: 90px;
   width: 100%;
   top: 0;
@@ -73,7 +73,7 @@ nav {
   flex-direction: row;
   justify-content: space-between; 
   align-items: center; 
-  padding: 0 5vh;
+  padding: 0 10vh;
   transition: box-shadow .3s ease-in-out;
 }
 
@@ -128,4 +128,32 @@ a {
   nav {
     padding: 0px;
   }
+}
+
+
+
+
+.advice {
+  height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  align-self: baseline;
+  background-color: #02061b;
+  font-size: 1.1rem;
+  font-family: var(--source-code-pro);
+  color: #fff;
+  font-weight: 400;
+}
+
+
+.advice > a {
+  color: #378cfc;
+  margin-left: 1.5vh;
+}
+
+.advice > a:hover {
+  text-decoration: underline;
 }
