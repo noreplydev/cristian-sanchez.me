@@ -40,6 +40,7 @@ export const Sections = styled.div`
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    gap: 20px;
 
     @media (max-width: 700px) {
         display: none; 
