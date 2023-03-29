@@ -34,6 +34,7 @@ export const MainCard = ({ project }) => {
       }, 300)
 
       // card size
+      const a = 'hola'
       const cardWidth = card.offsetWidth
       const cardHeight = card.offsetHeight
 
