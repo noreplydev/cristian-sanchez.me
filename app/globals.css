@@ -116,22 +116,6 @@ a {
   margin-bottom: 1vh;
 }
 
-@media (max-width: 768px) {
-  header {
-    padding: 0 3vh;
-  }
-
-  ul {
-    display: none; 
-  }
-
-  nav {
-    padding: 0px;
-  }
-}
-
-
-
 
 .advice {
   height: 60px;
@@ -156,4 +140,21 @@ a {
 
 .advice > a:hover {
   text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  ul {
+    display: none; 
+  }
+
+  nav {
+    padding: 3vh;
+  }
+
+  .advice {
+    height: fit-content;
+    padding: 3vh;
+    font-size: .8rem;
+    flex-direction: column;
+  }
 }
