@@ -1,5 +1,5 @@
 import Image from "next/image";
-import logo from '@/assets/logo.svg'
+import logo from '@/public/assets/logo.svg'
 
 export default function Footer() {
   return (

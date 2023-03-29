@@ -12,6 +12,18 @@ const getPostContent = (slug) => {
   return { data, content}
 }
 
+export function generateStaticParams() {
+  const params = fs.readdirSync('posts')
+    .filter((file) => file.endsWith('.md'))
+    .map((file) => {
+      const filename = file.replace('.md', '')
+      return { slug: filename }
+    })
+
+  return params
+}
+
+
 export default function Post({params}) {
   const {slug} = params
   const {data, content} = getPostContent(slug)

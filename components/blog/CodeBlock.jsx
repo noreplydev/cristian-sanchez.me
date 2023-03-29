@@ -6,7 +6,7 @@ import { vs2015 } from 'react-syntax-highlighter/dist/cjs/styles/hljs';
 
 
 export default  function CodeBlock ({ ...props }) {
-  const language = props.className && props.className.replace('language-', ''); 
+  const language = props.className ? props.className.replace('language-', '') : ''
 
   return (
     <SyntaxHighlighter 

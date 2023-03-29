@@ -3,7 +3,7 @@ import style from './blogGrid.module.css'
 import matter from 'gray-matter'
 import PostCard from './PostCard.jsx'
 import Image from 'next/image'
-import asterisk from '@/assets/asterisk.svg'
+import asterisk from '@/public/assets/asterisk.svg'
 
 const getPostsMetadata = () => {
   const files = fs.readdirSync('posts/') // get all the files in the posts folder
