@@ -1,6 +1,7 @@
 import { Sora, Source_Code_Pro } from 'next/font/google'
 import Nav from '@/components/global/Nav'
 import './globals.css'
+import style from './page.module.css'
 import Footer from '@/components/global/Footer'
 
 export const metadata = {
