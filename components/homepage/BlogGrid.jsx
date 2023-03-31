@@ -1,23 +1,9 @@
 import fs from 'fs'
 import style from './blogGrid.module.css'
-import matter from 'gray-matter'
 import PostCard from './PostCard.jsx'
 import Image from 'next/image'
 import asterisk from '@/public/assets/asterisk.svg'
-
-const getPostsMetadata = () => {
-  const files = fs.readdirSync('posts/') // get all the files in the posts folder
-  const markdownFiles = files.filter(filename => filename.endsWith('.md')) 
-
-  const metadata = markdownFiles.map(filename => {
-    const file = fs.readFileSync(`posts/${filename}`, 'utf-8')
-    const { data } = matter(file) // get the headers metada from the file
-
-    return { slug: filename.replace('.md', ''), ...data }
-  })
-
-  return metadata
-}
+import { getPostsMetadata } from '@/lib/postMetadata'
 
 export default function BlogGrid () {
   const posts = getPostsMetadata()

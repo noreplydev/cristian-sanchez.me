@@ -1,7 +1,56 @@
 .postsGridContainer {
-  height: fit-content;
+  height: 100%;
   width: 100%;
+  display: grid; 
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 50px; 
+}
+
+.postCard {
+  position: relative;
+  aspect-ratio: 1/0.7;  
   display: flex;
-  flex-wrap: wrap;
-  background-color: blue;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px; 
+  border-radius: 15px;
+  background-color: #ececec83;
+  box-shadow: 0 0 0 1px var(--dark-gray);
+  transition: all 0.07s ease-in-out;
+}
+
+.postCard:hover {
+  box-shadow: 0 0 0 1px var(--vibrant-blue); 
+  background-color: #0055ff20;
+  scale: 1.05; 
+}
+
+.title {
+  font-family: var(--sora);
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: var(--text);
+}
+
+.postDate {
+  position: absolute;
+  top: 100%; 
+  right: 0%; 
+  transform: translateY(-100%);
+  padding: 20px; 
+  font-family: var(--sora);
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--text);
+}
+
+.banner {
+  height: auto;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
