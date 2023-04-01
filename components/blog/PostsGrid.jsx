@@ -1,11 +1,9 @@
-import React from 'react'
+'use client'
+
 import Link from 'next/link'
-
 import style from './postsGrid.module.css'
-import { getPostsMetadata } from '@/lib/postMetadata'
 
-export const PostsGrid = () => {
-  const data = getPostsMetadata()
+export function PostsGrid({data}) {
 
   return (
     <div className={style.postsGridContainer}>
