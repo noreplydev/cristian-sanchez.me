@@ -16,7 +16,7 @@
   justify-content: flex-start;
   padding: 20px; 
   border-radius: 15px;
-  background-color: #ececec83;
+  background-color: var(--gray-translucent);
   box-shadow: 0 0 0 1px var(--dark-gray);
   transition: all 0.07s ease-in-out;
 }
@@ -58,4 +58,22 @@
   transform: translate(-50%, -50%);
   z-index: 0;  
   opacity: 0.5;
+}
+
+
+@media (max-width: 768px) {
+  .postsGridContainer {
+    grid-template-columns: 1fr; 
+    gap: 20px;
+  }
+
+  .postCard {
+    transition: all 0.2s ease-in-out;
+  }
+
+  .postCard:hover {
+    background-color: var(--gray-translucent);
+    scale: 1; 
+    box-shadow: 0 0 0 1px var(--background-reverse);
+  }
 }

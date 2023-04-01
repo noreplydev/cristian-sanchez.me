@@ -46,3 +46,13 @@
 .input:focus {
   border-left: 1px solid var(--vibrant-blue); 
 }
+
+@media (max-width: 768px) {
+  .searchbarWrapper {
+    padding: 0vh 0vw; 
+  }
+
+  .input {
+    border-radius: 0px;
+  }
+}
