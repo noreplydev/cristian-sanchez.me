@@ -1,5 +1,6 @@
 import BlogGrid from '@/components/homepage/BlogGrid'
 import style from './page.module.css'
+import { Projects } from '@/components/homepage/Projects'
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
         </div>
       </section> 
       <BlogGrid/>
+      <Projects/>
     </main>
   )
 }
