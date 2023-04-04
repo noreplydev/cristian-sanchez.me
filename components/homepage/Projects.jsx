@@ -14,7 +14,13 @@ async function fetchUser() {
 }
 
 async function fetchColor() {
-  return fetch(process.env.COLORS_URL)
+  const url = process.env.NODE_ENV === 'development' 
+    ? process.env.COLORS_URL_DEV
+    : process.env.COLORS_URL 
+
+  console.log(url)
+
+  return fetch(url)
     .then((res) => res.json())
     .then((data) => data)
 }
@@ -51,7 +57,7 @@ export async function Projects() {
                 <p className={style.repoDescription}>{repo.description}</p>
                 <p className={style.repoUrl}>{repo.clone_url}</p>
                 <div className={style.detailsContainer}>
-                  <div style={{ backgroundColor: color[repo.language.toLowerCase()] }} className={style.dot}></div>
+                  <div style={color ? { backgroundColor: color[repo.language.toLowerCase()] } : {}} className={style.dot}></div>
                   <p className={style.bottomDetails}>{repo.language}</p>
                   <Image src="/assets/stargazer.svg" alt="github stargazer icon" width={15} height={15} />
                   <p className={style.bottomDetails}>{repo.stargazers_count}</p>
