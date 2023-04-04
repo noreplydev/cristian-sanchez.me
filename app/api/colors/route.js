@@ -1,9 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 
-export const runtime = 'nodejs'
-
-export function GET() {
+export async function GET() {
   const jsonFile = path.join(process.cwd(), 'data', 'colors.json') // get the path to the json file
   const json = fs.readFileSync(jsonFile, 'utf8') // read the json file
   
