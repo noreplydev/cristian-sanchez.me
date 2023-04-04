@@ -14,11 +14,9 @@ async function fetchUser() {
 }
 
 async function fetchColor() {
-  const url = process.env.NODE_ENV === 'development' 
-    ? process.env.COLORS_URL_DEV
+  const url = process.env.ENVIRONMENT === 'development' 
+    ? 'http://localhost:3000/api/colors' 
     : process.env.COLORS_URL 
-
-  console.log(url)
 
   return fetch(url)
     .then((res) => res.json())
@@ -28,7 +26,7 @@ async function fetchColor() {
 export async function Projects() {
   const repos = await fetchData()
   const user = await fetchUser()
-  //const color = await fetchColor()
+  const color = await fetchColor()
 
   return (
     <div className={style.parentContainer}>
