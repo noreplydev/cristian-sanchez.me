@@ -28,7 +28,7 @@ async function fetchColor() {
 export async function Projects() {
   const repos = await fetchData()
   const user = await fetchUser()
-  const color = await fetchColor()
+  //const color = await fetchColor()
 
   return (
     <div className={style.parentContainer}>
@@ -57,7 +57,7 @@ export async function Projects() {
                 <p className={style.repoDescription}>{repo.description}</p>
                 <p className={style.repoUrl}>{repo.clone_url}</p>
                 <div className={style.detailsContainer}>
-                  <div style={color ? { backgroundColor: color[repo.language.toLowerCase()] } : {}} className={style.dot}></div>
+                  <div className={style.dot}></div>
                   <p className={style.bottomDetails}>{repo.language}</p>
                   <Image src="/assets/stargazer.svg" alt="github stargazer icon" width={15} height={15} />
                   <p className={style.bottomDetails}>{repo.stargazers_count}</p>
