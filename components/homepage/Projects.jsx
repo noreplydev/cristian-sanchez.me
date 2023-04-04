@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import style from './projects.module.css'
 
 async function fetchData() {
@@ -12,19 +13,9 @@ async function fetchUser() {
     .then((data) => data)
 }
 
-async function fetchColor(language) {
-  
-  return fetch('http://localhost:3000/api/color', {
-    method: 'GET', 
-    headers: {
-      'Content-Type': 'application/json'
-    }, 
-    body: JSON.stringify()
-  })
-    .then((res) => {
-      console.log(res)
-      res.json()
-    })
+async function fetchColor() {
+  return fetch(process.env.COLORS_URL)
+    .then((res) => res.json())
     .then((data) => data)
 }
 
@@ -48,12 +39,23 @@ export async function Projects() {
         {
           repos.slice(0, 3).map((repo, index)=> {
             return (
-              <div className={style.projectContainer} key={index}>
-                <h3 className={style.repoName}>{repo.name}</h3>
+              <div
+                className={style.projectContainer} 
+                key={index}
+              >
+                <a 
+                  href={repo.clone_url} 
+                  target="_blank"
+                  className={style.repoName}>{repo.name}
+                </a>
                 <p className={style.repoDescription}>{repo.description}</p>
                 <p className={style.repoUrl}>{repo.clone_url}</p>
-                <p>{repo.language}</p>
-                <p>{repo.stargazers_count}</p>
+                <div className={style.detailsContainer}>
+                  <div style={{ backgroundColor: color[repo.language.toLowerCase()] }} className={style.dot}></div>
+                  <p className={style.bottomDetails}>{repo.language}</p>
+                  <Image src="/assets/stargazer.svg" alt="github stargazer icon" width={15} height={15} />
+                  <p className={style.bottomDetails}>{repo.stargazers_count}</p>
+                </div>
               </div>
             )
           })

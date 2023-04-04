@@ -11,12 +11,11 @@
   margin-bottom: 100px; 
 }
 
-
 .sectionTitle {
   font-size: 3.5rem;
   margin-bottom: -30px; 
-  margin-left: 45px;
-  z-index: 9999999999999; 
+  margin-left: 20px;
+  z-index: 1; 
 }
 
 .projectsContainer {
@@ -27,7 +26,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; 
-  border-radius: 30px;
+  border-radius: 15px;
   background-color: var(--gray-translucent);
   box-shadow: 0px 0px 0px 1px var(--gray);
   padding: 70px 45px; 
@@ -88,14 +87,26 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; 
-  padding-block: 45px;
-  border-bottom: 2px solid var(--gray);
+  padding: 45px;
+  box-shadow: 0 0 0 1px transparent; 
+  border-radius: 15px;
+  transition: all 0.2s ease-in-out;
+  margin-bottom: 20px; 
+}
+
+.projectContainer:hover {
+  box-shadow: 0 0 0 1px var(--dark-gray); 
 }
 
 .repoName {
   font-size: 1.3rem;
   font-weight: 600;
   margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.repoName:hover {
+  text-decoration: underline;
 }
 
 .repoDescription {
@@ -106,10 +117,70 @@
 
 .repoUrl {
   width: 100%;
-  padding: 10px 15px;
+  padding: 15px 20px;
   background-color: var(--gray);
+  color: var(--dark-gray); 
   font-size: 1rem;
   font-weight: 400;
-  margin-bottom: 5px;
+  margin-bottom: 15px;
   border-radius: 10px;
+  overflow-x: scroll;
+  white-space: nowrap;
+}
+
+.repoUrl::selection {
+  background-color: var(--background-reverse);
+  color: var(--background-color);
+}
+
+.detailsContainer {
+  position: relative;
+  height: fit-content;
+  width: 100%;
+  display: flex; 
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center; 
+}
+
+.dot {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: var(--gray);
+}
+
+.bottomDetails {
+  font-size: 1rem;
+  font-weight: 400;
+  margin-inline: 5px 15px;
+}
+
+
+@media (max-width: 768px) {
+  .parentContainer {
+    padding: 0 5vw; 
+  }
+
+  .projectsContainer {
+    padding: 70px 20px; 
+  }
+
+  .projectContainer {
+    padding: 20px; 
+  }
+}
+
+@media (max-width: 1440px) {
+  .repoUrl {
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: var(--source-code-pro);
+  } 
+}
+
+@media (min-width: 1024px ) and ( max-width: 1440px) {
+  .projectContainer {
+    padding: 30px; 
+  } 
 }
