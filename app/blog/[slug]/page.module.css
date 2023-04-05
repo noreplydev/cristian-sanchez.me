@@ -8,6 +8,17 @@
   padding: 0 20vw; 
 }
 
+.backLink {
+  margin-top: 20px;
+  font-size: 1.1rem; 
+  font-weight: 500;
+  color: var(--text)
+}
+
+.backLink:hover {
+  text-decoration: underline;
+}
+
 .title {
   width: 100%;
   text-align: center;
@@ -15,7 +26,7 @@
   font-weight: 700;
   color: var(--text-reverse);
   background-color: var(--background-reverse);
-  margin-block: 50px 10px; 
+  margin-block: 40px 10px; 
   padding: 60px 150px;
   border-radius: 10px;
 }
@@ -56,4 +67,15 @@
     font-size: 3.5rem;
     padding: 70px 200px;
   }
+}
+
+.githubLink {
+  margin-top: 50px; 
+  text-align: center;
+  align-self: center;
+  color: var(--vibrant-blue)
+}
+
+.githubLink:hover {
+  text-decoration: underline;
 }
