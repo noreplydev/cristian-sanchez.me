@@ -5,7 +5,7 @@ import style from './page.module.css'
 import Footer from '@/components/global/Footer'
 
 export const metadata = {
-  title: 'Cristin Sánchez',
+  title: 'Cristian Sánchez',
   description: 'Cristian Sánchez personal website, portfolio and blog',
 }
 

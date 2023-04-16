@@ -1,14 +1,31 @@
 import Image from 'next/image'
 import style from './projects.module.css'
 
-async function fetchData() {
-  return fetch(process.env.GITHUB_REPOS)
+async function fetchRepos() {
+  return fetch(process.env.GITHUB_REPOS, { 
+    cache: 'no-store', 
+    method: 'GET', 
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN_AUTH}`
+    }
+  })
     .then((res) => res.json())
-    .then((data) => data)
+    .then((data) => {
+      return  data
+        .sort((a, b) => {
+          return new Date(b.created_at) - new Date(a.created_at)
+        })
+        .slice(0, 3)
+    })
 }
 
 async function fetchUser() {
-  return fetch(process.env.GITHUB_USER)
+  return fetch(process.env.GITHUB_USER, {  
+    method: 'GET', 
+    headers: {
+      Authorization: `Bearer ${process.env.GITHUB_TOKEN_AUTH}`
+    }
+  })
     .then((res) => res.json())
     .then((data) => data)
 }
@@ -24,7 +41,7 @@ async function fetchColor() {
 }
 
 export async function Projects() {
-  const repos = await fetchData()
+  const repos = await fetchRepos()
   const user = await fetchUser()
   const colorsList = await fetchColor()
 
@@ -41,7 +58,7 @@ export async function Projects() {
           </div>
         </div>
         {
-          repos.slice(0, 3).map((repo, index)=> {
+          repos.map((repo, index)=> {
             return (
               <div
                 className={style.projectContainer} 
@@ -57,12 +74,12 @@ export async function Projects() {
                 <div className={style.detailsContainer}>
                   <div 
                     style={{ 
-                      backgroundColor: colorsList[repo.language.toLowerCase()] 
+                      backgroundColor: colorsList[repo?.language?.toLowerCase()]
                         ? colorsList[repo.language.toLowerCase()] 
                         : '#000000'
                     }}
                     className={style.dot}></div>
-                  <p className={style.bottomDetails}>{repo.language}</p>
+                  <p className={style.bottomDetails}>{repo.language || "Not a language"}</p>
                   <Image src="/assets/stargazer.svg" alt="github stargazer icon" width={15} height={15} />
                   <p className={style.bottomDetails}>{repo.stargazers_count}</p>
                 </div>
