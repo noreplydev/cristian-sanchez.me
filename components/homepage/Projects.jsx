@@ -5,9 +5,9 @@ async function fetchRepos() {
   return fetch(process.env.GITHUB_REPOS, { 
     cache: 'no-store', 
     method: 'GET', 
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN_AUTH}`
-    }
+    // headers: {
+    //   Authorization: `Bearer ${process.env.GITHUB_TOKEN_AUTH}`
+    // }
   })
     .then((res) => res.json())
     .then((data) => {
@@ -22,9 +22,9 @@ async function fetchRepos() {
 async function fetchUser() {
   return fetch(process.env.GITHUB_USER, {  
     method: 'GET', 
-    headers: {
-      Authorization: `Bearer ${process.env.GITHUB_TOKEN_AUTH}`
-    }
+    // headers: {
+    //   Authorization: `Bearer ${process.env.GITHUB_TOKEN_AUTH}`
+    // }
   })
     .then((res) => res.json())
     .then((data) => data)
@@ -32,7 +32,7 @@ async function fetchUser() {
 
 async function fetchColor() {
   const url = process.env.ENVIRONMENT === 'development' 
-    ? 'http://localhost:3000/api/colors' 
+    ? 'http://127.0.0.1:3000/api/colors' 
     : process.env.COLORS_URL 
 
   return fetch(url)
