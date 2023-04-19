@@ -11,7 +11,7 @@ async function fetchRepos() {
   })
     .then((res) => res.json())
     .then((data) => {
-      return  data
+      return data
         .sort((a, b) => {
           return new Date(b.created_at) - new Date(a.created_at)
         })
@@ -41,7 +41,7 @@ async function fetchColor() {
 }
 
 export async function Projects() {
-  const repos = await fetchRepos()
+  const repos = []//await fetchRepos()
   const user = await fetchUser()
   const colorsList = await fetchColor()
 

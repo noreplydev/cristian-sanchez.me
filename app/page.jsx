@@ -19,6 +19,11 @@ export default function Home() {
       </section> 
       <BlogGrid/>
       <Projects/>
+      <iframe
+        className={style.twitch}
+        src="https://player.twitch.tv/?channel=afrodeveloper&muted=true&parent=streamernews.example.com"
+      >
+      </iframe>
     </main>
   )
 }

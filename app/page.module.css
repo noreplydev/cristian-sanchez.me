@@ -97,3 +97,16 @@
     display: none; 
   }
 }
+
+.twitch {
+  position: fixed;
+  bottom: 0px; 
+  right: 0px;
+  height: 150px;
+  aspect-ratio: 16/9;
+  z-index:5 1000000; 
+  margin: 50px; 
+  border-radius: 10px;
+  outline: none; 
+  border: none;
+}

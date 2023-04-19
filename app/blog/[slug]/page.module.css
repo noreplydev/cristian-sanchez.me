@@ -47,6 +47,17 @@
   color: var(--text);
 }
 
+.githubLink {
+  margin-top: 50px; 
+  text-align: center;
+  align-self: center;
+  color: var(--vibrant-blue)
+}
+
+.githubLink:hover {
+  text-decoration: underline;
+}
+
 @media (max-width: 768px) {
   .parentContainer {
     padding: 0 5vw; 
@@ -67,15 +78,4 @@
     font-size: 3.5rem;
     padding: 70px 200px;
   }
-}
-
-.githubLink {
-  margin-top: 50px; 
-  text-align: center;
-  align-self: center;
-  color: var(--vibrant-blue)
-}
-
-.githubLink:hover {
-  text-decoration: underline;
 }
