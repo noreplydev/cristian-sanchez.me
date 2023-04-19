@@ -21,7 +21,9 @@ export default function Home() {
       <Projects/>
       <iframe
         className={style.twitch}
-        src="https://player.twitch.tv/?channel=afrodeveloper&muted=true&parent=streamernews.example.com"
+        height="150"
+        width="auto"
+        src="https://player.twitch.tv/?channel=afrodeveloper&muted=true&parent=cristian-sanchez.me"
       >
       </iframe>
     </main>
