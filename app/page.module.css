@@ -106,6 +106,7 @@
   z-index:5 1000000; 
   margin: 50px; 
   border-radius: 10px;
+  box-shadow: 0px 0px 0px 1px var(--text);
   outline: none; 
   border: none;
 }

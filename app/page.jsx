@@ -23,7 +23,7 @@ export default function Home() {
         className={style.twitch}
         height="150"
         width="auto"
-        src="https://player.twitch.tv/?channel=afrodeveloper&muted=true&parent=cristian-sanchez.me"
+        src="https://player.twitch.tv/?channel=afrodeveloper&muted=true&parent=www.cristian-sanchez.me"
       >
       </iframe>
     </main>
