@@ -1,6 +1,7 @@
 import BlogGrid from '@/components/homepage/BlogGrid'
 import style from './page.module.css'
 import { Projects } from '@/components/homepage/Projects'
+import Twitch from '@/components/homepage/Twitch'
 
 export default function Home() {
   return (
@@ -19,13 +20,7 @@ export default function Home() {
       </section> 
       <BlogGrid/>
       <Projects/>
-      <iframe
-        className={style.twitch}
-        height="150"
-        width="auto"
-        src="https://player.twitch.tv/?channel=afrodeveloper&muted=true&parent=www.cristian-sanchez.me"
-      >
-      </iframe>
+      <Twitch/>
     </main>
   )
 }

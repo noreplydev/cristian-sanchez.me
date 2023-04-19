@@ -41,7 +41,7 @@ async function fetchColor() {
 }
 
 export async function Projects() {
-  const repos = []//await fetchRepos()
+  const repos = await fetchRepos()
   const user = await fetchUser()
   const colorsList = await fetchColor()
 
