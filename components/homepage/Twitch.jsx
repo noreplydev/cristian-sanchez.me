@@ -8,7 +8,7 @@ export default function Twitch() {
       const twitch = document.querySelector('iframe')
       scroll = window.pageYOffset;
 
-      if ( twitch ) {
+      if ( twitch && window.innerWidth > 768) {
         if (scroll > 150) {
           twitch.style.display = 'block'
         } else {
@@ -17,13 +17,6 @@ export default function Twitch() {
       } 
     }
 
-    const checkLive = async () => {
-      await fetch('https://api.twitch.tv/helix/streams?user_login=afrodeveloper', {
-        headers: {
-          'Client-ID': 'q1q7q7q7q7q7q7q7q7q7q7q7q7q7q7',
-        }
-      })
-    }
     window.addEventListener('scroll', setStyleOnScroll)
 
     return () => {
