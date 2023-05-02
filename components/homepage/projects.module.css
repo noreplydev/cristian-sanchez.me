@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; 
-  padding: 0 30vw; 
+  padding: 0 25vw; 
   background-color: var(--background-color);
   margin-bottom: 100px; 
 }
@@ -27,7 +27,7 @@
   justify-content: flex-start;
   align-items: flex-start; 
   border-radius: 15px;
-  background-color: var(--gray-translucent);
+  background-color: var(--white-translucent);
   box-shadow: 0px 0px 0px 1px var(--gray);
   padding: 70px 45px; 
   transition: all 0.2s ease-in-out;
@@ -54,7 +54,6 @@
   justify-content: flex-start;
   align-items: flex-start; 
   padding-bottom: 45px; 
-  box-shadow: 0px 2px 0px 0px var(--gray);
 }
 
 .userDetailsContainer {

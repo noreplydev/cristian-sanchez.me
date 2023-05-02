@@ -16,7 +16,7 @@
   justify-content: flex-start;
   padding: 20px; 
   border-radius: 15px;
-  background-color: var(--gray-translucent);
+  background-color: var(--white-translucent);
   box-shadow: 0 0 0 1px var(--dark-gray);
   transition: all 0.07s ease-in-out;
 }

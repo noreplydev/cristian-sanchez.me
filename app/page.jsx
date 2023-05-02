@@ -20,7 +20,7 @@ export default function Home() {
         </div> 
       </section> 
       <BlogGrid/>
-      {/* <Projects/> */}
+      <Projects/>
       <Twitch/>
     </main>
   )

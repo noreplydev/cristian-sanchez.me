@@ -22,7 +22,7 @@
   padding: 25px; 
   transition: all 0.2s ease-in-out;  
   box-shadow: 0px 0px 0px 1px var(--gray); 
-  background-color: var(--gray-translucent);
+  background-color: var(--white-translucent);
   border-radius: 12px;
   overflow: hidden;
 }
