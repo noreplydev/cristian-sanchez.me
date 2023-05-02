@@ -7,7 +7,12 @@ import { getPostsMetadata } from '@/lib/postMetadata'
 
 export default function BlogGrid () {
   const posts = getPostsMetadata()
-  const mostRecentPosts = posts.sort((a, b) => new Date(b.date) - new Date(a.date)).slice(0, 3)
+  const mostRecentPosts = posts.sort((a, b) => {
+    const dateA = a.date.split('-')
+    const dateB = b.date.split('-')
+
+    return new Date(dateB[2], dateB[1], dateB[0]) - new Date(dateA[2], dateA[1], dateA[0])
+  }).slice(0, 3)
   const classes = ['main', 'left', 'right']
   
   return (

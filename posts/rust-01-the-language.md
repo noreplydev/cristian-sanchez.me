@@ -2,7 +2,7 @@
 title: "Rust: 01 The language"
 slug: "rust-01-the-language"
 topics: "Rust 🦀 & Beginners" 
-banner: "/posts/banners/rust-the-language.png"
+banner: "/posts/rust-01-the-language/rust-the-language.png"
 date: "05-04-2023"
 ---
 
