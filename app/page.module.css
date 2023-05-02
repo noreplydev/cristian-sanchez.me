@@ -15,8 +15,117 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 90px);
+  height: calc(100vh - 50px);
   background-color: transparent;
+}
+
+.titleContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  z-index: 3;
+  width: fit-content;
+  height: fit-content; 
+  padding: 3vh 6vw;
+  margin-bottom: 20vh;
+}
+
+.gridLineVertical {
+  --color: rgba(0, 0, 0, 0.5);
+  --height: 1px;
+  --width: 7px;
+  /* Bleed in or out from the container */
+
+  position: absolute;
+  top: -50%;
+  left: 0;
+  width: 1px;
+  height: 0%;
+  
+  background: linear-gradient(
+    to bottom,
+    #000 , /* first color */
+     #000 25% 50%, /* second color and the percentage of where starts and ends*/
+    transparent 50%,
+    transparent
+  );
+  background-size: 1px 7px;
+  background-repeat: repeat; 
+  animation: showVerticalLines 0.6s 0.5s ease-in-out forwards;
+}
+
+.gridLineVerticalLeft {
+  --color: rgba(0, 0, 0, 0.5);
+  --height: 1px;
+  --width: 7px;
+  /* Bleed in or out from the container */
+
+  position: absolute;
+  bottom: -50%;
+  left: 100%;
+  width: 1px;
+  height: 0%;
+  
+  background: linear-gradient(
+    to bottom,
+    #000 , /* first color */
+     #000 25% 50%, /* second color and the percentage of where starts and ends*/
+    transparent 50%,
+    transparent
+  );
+  background-size: 1px 7px;
+  background-repeat: repeat; 
+  animation: showVerticalLines 0.6s 0.5s ease-in-out forwards;
+}
+
+.gridLineHorizontal {
+  --color: rgba(0, 0, 0, 0.5);
+  --height: 1px;
+  --width: 7px;
+  /* Bleed in or out from the container */
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  
+  background: linear-gradient(
+    to right,
+    #000 , /* first color */
+     #000 25% 50%, /* second color and the percentage of where starts and ends*/
+    transparent 50%,
+    transparent
+  );
+  background-size: 7px 1px;
+  background-repeat: repeat; 
+  animation: showHorizontalLines 0.6s 0.5s ease-in-out forwards;
+}
+
+.gridLineHorizontalBottom {
+  --color: rgba(0, 0, 0, 0.5);
+  --height: 1px;
+  --width: 7px;
+  /* Bleed in or out from the container */
+
+  position: absolute;
+  bottom: -10%;
+  right: 0;
+  width: 0%;
+  height: 1px;
+  
+  background: linear-gradient(
+    to right,
+    #000 , /* first color */
+     #000 25% 50%, /* second color and the percentage of where starts and ends*/
+    transparent 50%,
+    transparent
+  );
+  background-size: 7px 1px;
+  background-repeat: repeat; 
+  animation: showHorizontalLines 0.6s 0.5s ease-in-out forwards;
 }
 
 .title {
@@ -25,62 +134,75 @@
   font-weight: 700;
   margin-bottom: 1rem;
   z-index: 3;
-  pointer-events: none;
   text-align: center;
 }
 
-.subtitle {
-  font-family: var(--sora);
-  font-size: 2rem;
-  font-weight: 300;
-  margin-bottom: 1rem;
+
+.subtitleInlineContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
   z-index: 3;
-  pointer-events: none;
+  width: fit-content;
+  height: fit-content; 
+  gap: 20px; 
 }
 
-.grid {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  display: grid;
-  grid-template-columns: repeat(18, 1fr);
-  grid-template-rows: repeat(13, 1fr);
-  width: 100%;
-  height: 100%; 
-  z-index: 1;
-}
-
-.overlay {
-  position: absolute; 
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%; 
-  background-color: transparent;
-  box-shadow: inset 0px 1px 50vh 30vh var(--background-color);
-  z-index: 2;
-  pointer-events: none;
-}
-
-.item {
-  box-shadow: inset 0px 0px 0px 0.1vh var(--gray); 
-  transition: all 0.10s ease;
-}
-
-.item:hover {
+.subtitle {
+  width: fit-content;
+  height: fit-content;
+  font-family: var(--sora);
+  font-size: 1.4rem;
+  font-weight: 300;
+  padding: 10px 20px;
   background-color: var(--gray);
-  animation: disappear 1.5s ease forwards; 
+  color: var(--dark-gray); 
+  border-radius: 10px;
+  z-index: 3;
+  cursor: pointer;
+  user-select: none;
+  outline: none;
+  border: 1px solid transparent;
+  opacity: 0;
+  transition: all 0.15s ease;
+  animation: appear 0.15s 0.8s ease-in-out forwards;
 }
 
-@keyframes disappear {
+.subtitle:nth-child(2):active {
+  transform: scale(0.89);
+}
+
+.title::selection, .title::-moz-selection, .title::-webkit-selection, 
+.subtitle::selection, .subtitle::-moz-selection, .subtitle::-webkit-selection {
+  background-color: var(--selection);
+  color: var(--selection-text);
+}
+
+@keyframes showVerticalLines {
   0% {
-    background-color: var(--gray);
-  }
-  60% {
-    background-color: var(--gray);  
+    height: -50%;
   }
   100% {
-    background-color: transparent;
+    height: 200%;
+  } 
+}
+
+@keyframes showHorizontalLines {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 93%;
+  } 
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   } 
 }
 

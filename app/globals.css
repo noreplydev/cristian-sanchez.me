@@ -2,6 +2,8 @@
   --background-color: #fff;
   --background-reverse: #000;
   --vibrant-blue: #0057ff;
+  --selection: #000;
+  --selection-text: #ffffff7f;
   --gray: #ececec;
   --gray-translucent: #ececec83;
   --dark-gray: #898989; 
@@ -15,10 +17,10 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background-color: #fff;   
+    /* --background-color: #fff;   
     --background-reverse: #000;
     --gray: #ececec;
-    --text: #000000;
+    --text: #000000; */
   }
 }
 
