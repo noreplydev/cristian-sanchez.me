@@ -16,6 +16,7 @@
   align-items: center;
   width: 100%;
   height: calc(100vh - 50px);
+  padding-inline: 25vw;
   background-color: transparent;
 }
 
@@ -26,16 +27,16 @@
   justify-content: center;
   align-items: flex-start;
   z-index: 3;
-  width: fit-content;
+  width: 100%;
   height: fit-content; 
-  padding: 3vh 6vw;
+  padding: 4vh 5vh;
   margin-bottom: 20vh;
 }
 
 .gridLineVertical {
   --color: rgba(0, 0, 0, 0.5);
   --height: 1px;
-  --width: 7px;
+  --width: 8px;
   /* Bleed in or out from the container */
 
   position: absolute;
@@ -51,15 +52,15 @@
     transparent 50%,
     transparent
   );
-  background-size: 1px 7px;
+  background-size: 1px 8px;
   background-repeat: repeat; 
-  animation: showVerticalLines 0.6s 0.5s ease-in-out forwards;
+  animation: showVerticalLines 0.8s 0.65s ease-in-out forwards;
 }
 
-.gridLineVerticalLeft {
+.gridLineVerticalRight {
   --color: rgba(0, 0, 0, 0.5);
   --height: 1px;
-  --width: 7px;
+  --width: 8px;
   /* Bleed in or out from the container */
 
   position: absolute;
@@ -75,15 +76,15 @@
     transparent 50%,
     transparent
   );
-  background-size: 1px 7px;
+  background-size: 1px 8px;
   background-repeat: repeat; 
-  animation: showVerticalLines 0.6s 0.5s ease-in-out forwards;
+  animation: showVerticalLines 0.8s 0.65s ease-in-out forwards;
 }
 
 .gridLineHorizontal {
   --color: rgba(0, 0, 0, 0.5);
   --height: 1px;
-  --width: 7px;
+  --width: 8px;
   /* Bleed in or out from the container */
 
   position: absolute;
@@ -99,15 +100,15 @@
     transparent 50%,
     transparent
   );
-  background-size: 7px 1px;
+  background-size: 8px 1px;
   background-repeat: repeat; 
-  animation: showHorizontalLines 0.6s 0.5s ease-in-out forwards;
+  animation: showHorizontalLines 0.8s 0.65s ease-in-out forwards;
 }
 
 .gridLineHorizontalBottom {
   --color: rgba(0, 0, 0, 0.5);
   --height: 1px;
-  --width: 7px;
+  --width: 8px;
   /* Bleed in or out from the container */
 
   position: absolute;
@@ -123,9 +124,9 @@
     transparent 50%,
     transparent
   );
-  background-size: 7px 1px;
+  background-size: 8px 1px;
   background-repeat: repeat; 
-  animation: showHorizontalLines 0.6s 0.5s ease-in-out forwards;
+  animation: showHorizontalLines 0.8s 0.65s ease-in-out forwards;
 }
 
 .title {
@@ -173,6 +174,12 @@
   transform: scale(0.89);
 }
 
+.subtitle:nth-child(2):focus {
+  box-shadow: 
+    inset 0px 0px 0px 2px var(--background-color),
+    0px 0px 0px 2px var(--vibrant-blue);
+}
+
 .title::selection, .title::-moz-selection, .title::-webkit-selection, 
 .subtitle::selection, .subtitle::-moz-selection, .subtitle::-webkit-selection {
   background-color: var(--selection);
@@ -182,6 +189,8 @@
 @keyframes showVerticalLines {
   0% {
     height: -50%;
+  }
+  80% {
     opacity: 1;
   }
   100% {
@@ -193,6 +202,8 @@
 @keyframes showHorizontalLines {
   0% {
     width: 0;
+  }
+  80% {
     opacity: 1;
   }
   100% {
@@ -213,6 +224,7 @@
 @media (max-width: 768px) {
   .firstSection {
     height: calc(100vh - 100px);
+    padding: 0 5vw;
   }
   
   .overlay {
