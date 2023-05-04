@@ -4,6 +4,7 @@ import PostCard from './PostCard.jsx'
 import Image from 'next/image'
 import asterisk from '@/public/assets/asterisk.svg'
 import { getPostsMetadata } from '@/lib/postMetadata'
+import GridLine from '../global/GridLine'
 
 export default function BlogGrid () {
   const posts = getPostsMetadata()
@@ -17,10 +18,12 @@ export default function BlogGrid () {
   
   return (
     <section className={style.parentContainer} >
-      <Image src={asterisk} alt="Background asterisk image" className={style.asterisk}/>
-      <Image src={asterisk} alt="Background asterisk image" className={style.asterisk}/>
+      {/* <Image src={asterisk} alt="Background asterisk image" className={style.asterisk}/>
+      <Image src={asterisk} alt="Background asterisk image" className={style.asterisk}/> */}
       <h2 className={style.title}>Blog</h2>
       <div className={style.recentsContainer}>
+        <GridLine lineType={'verticalLeft'} offset='offset'/>
+        <GridLine lineType={'horizontalTop'}/>
         {
           mostRecentPosts.map((post, index) => {
             return (

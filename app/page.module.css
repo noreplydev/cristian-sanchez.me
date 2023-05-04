@@ -33,102 +33,6 @@
   margin-bottom: 20vh;
 }
 
-.gridLineVertical {
-  --color: rgba(0, 0, 0, 0.5);
-  --height: 1px;
-  --width: 8px;
-  /* Bleed in or out from the container */
-
-  position: absolute;
-  top: -50%;
-  left: 0;
-  width: 1px;
-  height: 0%;
-  
-  background: linear-gradient(
-    to bottom,
-    #000 , /* first color */
-     #000 25% 50%, /* second color and the percentage of where starts and ends*/
-    transparent 50%,
-    transparent
-  );
-  background-size: 1px 8px;
-  background-repeat: repeat; 
-  animation: showVerticalLines 0.8s 0.65s ease-in-out forwards;
-}
-
-.gridLineVerticalRight {
-  --color: rgba(0, 0, 0, 0.5);
-  --height: 1px;
-  --width: 8px;
-  /* Bleed in or out from the container */
-
-  position: absolute;
-  bottom: -50%;
-  left: 100%;
-  width: 1px;
-  height: 0%;
-  
-  background: linear-gradient(
-    to bottom,
-    #000 , /* first color */
-     #000 25% 50%, /* second color and the percentage of where starts and ends*/
-    transparent 50%,
-    transparent
-  );
-  background-size: 1px 8px;
-  background-repeat: repeat; 
-  animation: showVerticalLines 0.8s 0.65s ease-in-out forwards;
-}
-
-.gridLineHorizontal {
-  --color: rgba(0, 0, 0, 0.5);
-  --height: 1px;
-  --width: 8px;
-  /* Bleed in or out from the container */
-
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 0%;
-  height: 1px;
-  
-  background: linear-gradient(
-    to right,
-    #000 , /* first color */
-     #000 25% 50%, /* second color and the percentage of where starts and ends*/
-    transparent 50%,
-    transparent
-  );
-  background-size: 8px 1px;
-  background-repeat: repeat; 
-  animation: showHorizontalLines 0.8s 0.65s ease-in-out forwards;
-}
-
-.gridLineHorizontalBottom {
-  --color: rgba(0, 0, 0, 0.5);
-  --height: 1px;
-  --width: 8px;
-  /* Bleed in or out from the container */
-
-  position: absolute;
-  bottom: -10%;
-  right: 0;
-  width: 0%;
-  height: 1px;
-  
-  background: linear-gradient(
-    to right,
-    #000 , /* first color */
-     #000 25% 50%, /* second color and the percentage of where starts and ends*/
-    transparent 50%,
-    transparent
-  );
-  background-size: 8px 1px;
-  background-repeat: repeat; 
-  animation: showHorizontalLines 0.8s 0.65s ease-in-out forwards;
-}
-
 .title {
   font-family: var(--sora);
   font-size: 4rem;
@@ -184,32 +88,6 @@
 .subtitle::selection, .subtitle::-moz-selection, .subtitle::-webkit-selection {
   background-color: var(--selection);
   color: var(--selection-text);
-}
-
-@keyframes showVerticalLines {
-  0% {
-    height: -50%;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    height: 200%;
-    opacity: 0.3;
-  } 
-}
-
-@keyframes showHorizontalLines {
-  0% {
-    width: 0;
-  }
-  80% {
-    opacity: 1;
-  }
-  100% {
-    width: 93%;
-    opacity: 0.3;
-  } 
 }
 
 @keyframes appear {

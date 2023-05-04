@@ -8,6 +8,7 @@
   align-items: flex-start; 
   padding: 0 25vw; 
   background-color: var(--background-color);
+  margin-top: 300px;
   margin-bottom: 100px; 
 }
 

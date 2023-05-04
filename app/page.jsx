@@ -3,6 +3,7 @@ import style from './page.module.css'
 import { Projects } from '@/components/homepage/Projects'
 import Twitch from '@/components/homepage/Twitch'
 import CommandK from '@/components/homepage/CommandK'
+import GridLine from '@/components/global/GridLine'
 
 export default function Home() {
   return (
@@ -10,10 +11,10 @@ export default function Home() {
       <CommandK/>
       <section className={style.firstSection}>
         <div className={style.titleContainer}>
-          <div className={style.gridLineVertical}></div>
-          <div className={style.gridLineVerticalRight}></div>
-          <div className={style.gridLineHorizontal}></div>
-          <div className={style.gridLineHorizontalBottom}></div>
+          <GridLine lineType="verticalLeft" offset='offset'/>
+          <GridLine lineType="verticalRight" offset='offset' />
+          <GridLine lineType="horizontalTop" />
+          <GridLine lineType="horizontalBottom" />
           <h1 className={style.title}>Cristian Sánchez</h1>
           <div className={style.subtitleInlineContainer}>
             <button className={style.subtitle}>Software developer</button>
@@ -22,7 +23,7 @@ export default function Home() {
         </div> 
       </section> 
       <BlogGrid/>
-      {/* <Projects/> */}
+      <Projects/>
       <Twitch/>
     </main>
   )
