@@ -90,6 +90,30 @@
   color: var(--selection-text);
 }
 
+.lineLeft {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.lineTop {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.lineRight {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+}
+
+.lineBottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 @keyframes appear {
   0% {
     opacity: 0;
