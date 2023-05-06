@@ -1,7 +1,7 @@
 import style from './gridLine.module.css'
 
-export default function GridLine({ lineType, offset = 'noOffset' }) {
+export default function GridLine({ lineType, position = 'topLeft', offset = 'noOffset' }) {
   return (
-    <div className={`${style[lineType]} ${offset}`}></div>
+    <div className={`${style[lineType]} ${offset} ${style[position]}`}></div>
   )
 }

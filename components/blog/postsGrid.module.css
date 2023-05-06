@@ -60,7 +60,6 @@
   opacity: 0.2; 
 }
 
-
 @media (max-width: 768px) {
   .postsGridContainer {
     grid-template-columns: 1fr; 

@@ -1,5 +1,5 @@
 .vertical {
-  position: relative;
+  position: absolute;
   --color: rgba(0, 0, 0, 0.5);
   --height: 1px;
   --width: 8px;
@@ -41,6 +41,26 @@
   background-repeat: repeat; 
   animation: showHorizontalLines 0.8s 0.75s ease-in-out forwards;
     /* Fade out the edges */
+}
+
+.topLeft {
+  top: 0px; 
+  left: 0px;
+}
+
+.topRight {
+  top: 0px; 
+  right: 0px;
+}
+
+.bottomLeft {
+  bottom: 0px; 
+  left: 0px;
+} 
+
+.bottomRight {
+  bottom: 0px; 
+  right: 0px;
 }
 
 /* OPTIONAL OFFSET STYLE */

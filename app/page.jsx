@@ -11,10 +11,10 @@ export default function Home() {
       <CommandK/>
       <section className={style.firstSection}>
         <div className={style.titleContainer}>
-          <GridLine lineType="vertical" offset='offset' className={style.lineLeft}/>
-          <GridLine lineType="vertical" offset='offset'className={style.lineTop}/>
-          <GridLine lineType="horizontal" className={style.lineTop}/>
-          <GridLine lineType="horizontal" className={style.lineBottom}/>
+          <GridLine lineType="vertical" position="topLeft" offset='offset' />
+          <GridLine lineType="vertical" position="topRight" offset='offset' />
+          <GridLine lineType="horizontal" position="bottomLeft" />
+          <GridLine lineType="horizontal"  />
           <h1 className={style.title}>Cristian Sánchez</h1>
           <div className={style.subtitleInlineContainer}>
             <button className={style.subtitle}>Software developer</button>
@@ -23,7 +23,7 @@ export default function Home() {
         </div> 
       </section> 
       <BlogGrid/>
-      <Projects/>
+      {/*<Projects/>*/}
       <Twitch/>
     </main>
   )
