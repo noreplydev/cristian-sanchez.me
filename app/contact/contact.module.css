@@ -42,12 +42,30 @@
 }
 
 .verticalLines {
-  height: 300%;
+  height: 350%;
   width: 100%;
   position: absolute;
   top: 0;
   left: 0;
   transform: translateY(-40px);
+  z-index: -1;
+}
+
+.socialImages {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+  gap: 25px; 
+  padding: 4vh 7vw; 
+}
+
+.socialImage {
+  height: 40px;
+  width: auto;
+  cursor: pointer; 
 }
 
 .form {
@@ -57,7 +75,7 @@
   justify-content: center;
   height: fit-content;
   width: 100%;
-  padding: 4vh 7vw; 
+  padding: 0vh 7vw; 
   gap: 17px;
   margin-bottom: fit-content; 
 }
@@ -96,4 +114,20 @@
   background-color: var(--vibrant-blue);
   padding: 1vh 5vh; 
   cursor: pointer; 
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    padding-inline: 5vw; 
+  }
+
+  .form > * {
+    font-size: 16px; 
+    padding: 1.2vh 1.5vh;
+  }
+
+  .send {
+    width: 100%;
+    padding: 1vh 3vh;
+  }
 }
