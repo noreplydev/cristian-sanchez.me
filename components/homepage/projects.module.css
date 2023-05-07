@@ -27,15 +27,8 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start; 
-  border-radius: 15px;
-  background-color: var(--white-translucent);
-  box-shadow: 0px 0px 0px 1px var(--gray);
   padding: 70px 45px; 
   transition: all 0.2s ease-in-out;
-}
-
-.projectsContainer:hover {
-  box-shadow: 0px 0px 0px 1px var(--background-reverse);
 }
 
 .avatar {
@@ -90,7 +83,7 @@
   align-items: flex-start; 
   padding: 45px;
   box-shadow: 0 0 0 1px transparent; 
-  border-radius: 15px;
+  border-radius: 5px;
   transition: all 0.2s ease-in-out;
   margin-bottom: 20px; 
 }
@@ -157,6 +150,12 @@
   margin-inline: 5px 15px;
 }
 
+.leftLineContainer {
+  position: absolute;
+  height: 150%;
+  top: -25%;
+  left: 0%;
+}
 
 @media (max-width: 768px) {
   .parentContainer {

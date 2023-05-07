@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import style from './projects.module.css'
+import GridLine from '../global/GridLine'
 
 async function fetchRepos() {
   return fetch(process.env.GITHUB_REPOS, { 
@@ -50,6 +51,10 @@ export async function Projects() {
     <div className={style.parentContainer}>
       <h2 className={style.sectionTitle}>Projects</h2> 
       <div className={style.projectsContainer}>
+        <div className={style.leftLineContainer}>
+          <GridLine lineType="vertical" position="topLeft" offset='offsetBottom' />
+        </div>
+        <GridLine lineType="horizontal" position="topLeft" offset='offsetRight' />
         <div className={style.userInfoContainer}>
           <img className={style.avatar} src={user.avatar_url} alt="avatar" />
           <div className={style.userDetailsContainer}>
