@@ -39,7 +39,7 @@
   );
   background-size: 8px 1px;
   background-repeat: repeat; 
-  animation: showHorizontalLines 0.8s 0.75s ease-in-out forwards;
+  animation: showHorizontalLines 0.8s 0.70s ease-in-out forwards;
     /* Fade out the edges */
 }
 

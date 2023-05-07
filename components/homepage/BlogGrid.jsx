@@ -22,8 +22,12 @@ export default function BlogGrid () {
       <Image src={asterisk} alt="Background asterisk image" className={style.asterisk}/> */}
       <h2 className={style.title}>Blog</h2>
       <div className={style.recentsContainer}>
-        <GridLine lineType={'verticalLeft'} offset='offset'/>
-        <GridLine lineType={'horizontalTop'}/>
+        <div className={style.leftLine}>
+          <GridLine lineType='vertical' position='topLeft' offset='offset'/>
+        </div>
+        <div className={style.rightLine}>
+          <GridLine lineType='vertical' position='topRight' offset='offset'/>
+        </div>
         {
           mostRecentPosts.map((post, index) => {
             return (

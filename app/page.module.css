@@ -15,7 +15,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 150px);
   padding-inline: 25vw;
   background-color: transparent;
 }
@@ -30,7 +30,6 @@
   width: 100%;
   height: fit-content; 
   padding: 4vh 5vh;
-  margin-bottom: 20vh;
 }
 
 .title {
@@ -90,28 +89,13 @@
   color: var(--selection-text);
 }
 
-.lineLeft {
+.verticalLinesContainer {
+  height: 200%;
+  width: 100%;
   position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.lineTop {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-
-.lineRight {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-}
-
-.lineBottom {
-  position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
+  transform: translateY(-25%);
 }
 
 @keyframes appear {
