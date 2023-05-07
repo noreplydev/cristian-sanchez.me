@@ -12,8 +12,8 @@ export default function Home() {
       <section className={style.firstSection}>
         <div className={style.titleContainer}>
           <div className={style.verticalLinesContainer}>
-            <GridLine lineType="vertical" position="topLeft" offset='offset' />
-            <GridLine lineType="vertical" position="topRight" offset='offset' />
+            <GridLine lineType="vertical" position="topLeft" offset='offsetTop' />
+            <GridLine lineType="vertical" position="topRight" offset='offsetTop' />
           </div>
           <GridLine lineType="horizontal" position='topLeft' />
           <GridLine lineType="horizontal" position="bottomLeft" />
@@ -25,7 +25,7 @@ export default function Home() {
         </div> 
       </section> 
       <BlogGrid/>
-      <Projects/>
+      {/* <Projects/> */}
       <Twitch/>
     </main>
   )

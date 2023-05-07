@@ -64,11 +64,40 @@
 }
 
 /* OPTIONAL OFFSET STYLE */
-.offset {
-  mask-composite: exclude;
+.offsetTop {
 	-webkit-mask: linear-gradient(
     to top, 
-    #fff, 
+    #fff 60%, 
+    #000,  
+    transparent 
+  )
+}
+
+.offsetBottom {
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(
+    to bottom, 
+    #fff 60%, 
+    #000, 
+    transparent 
+  )
+}
+
+.offsetLeft {
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(
+    to left, 
+    #fff 60%, 
+    #000, 
+    transparent 
+  )
+}
+
+.offsetRight {
+  mask-composite: exclude;
+  -webkit-mask: linear-gradient(
+    to right, 
+    #fff 60%, 
     #000, 
     transparent 
   )

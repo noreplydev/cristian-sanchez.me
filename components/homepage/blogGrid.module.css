@@ -92,5 +92,13 @@
   .asterisk {
     display: none;
   }
+
+  .centerLine {
+    top: 0%;
+  }
+
+  .rightLine {
+    left: 100%;
+  }
 }
 

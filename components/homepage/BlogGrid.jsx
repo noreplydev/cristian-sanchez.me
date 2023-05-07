@@ -23,13 +23,13 @@ export default function BlogGrid () {
       <h2 className={style.title}>Blog</h2>
       <div className={style.recentsContainer}>
         <div className={style.leftLine}>
-          <GridLine lineType='vertical' position='topLeft' offset='offset'/>
+          <GridLine lineType='vertical' position='topLeft' />
         </div>
         <div className={style.rightLine}>
-          <GridLine lineType='vertical' position='topRight' offset='offset'/>
+          <GridLine lineType='vertical' position='topRight' offset='offsetBottom'/>
         </div>
         <div className={style.centerLine}>
-          <GridLine lineType='horizontal' position='topLeft' offset='offset'/>
+          <GridLine lineType='horizontal' position='topLeft' offset='offsetRight'/>
         </div>
         {
           mostRecentPosts.map((post, index) => {
