@@ -22,6 +22,7 @@ async function fetchRepos() {
 async function fetchUser() {
   return fetch(process.env.GITHUB_USER, {  
     method: 'GET', 
+    cache: 'no-store',
     // headers: {
     //   Authorization: `Bearer ${process.env.GITHUB_TOKEN_AUTH}`
     // }
@@ -35,7 +36,7 @@ async function fetchColor() {
     ? 'http://127.0.0.1:3000/api/colors' 
     : process.env.COLORS_URL 
 
-  return fetch(url)
+  return fetch(url, { cache: 'no-store' })
     .then((res) => res.json())
     .then((data) => data)
 }

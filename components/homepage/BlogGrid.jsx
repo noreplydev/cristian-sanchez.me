@@ -28,6 +28,9 @@ export default function BlogGrid () {
         <div className={style.rightLine}>
           <GridLine lineType='vertical' position='topRight' offset='offset'/>
         </div>
+        <div className={style.centerLine}>
+          <GridLine lineType='horizontal' position='topLeft' offset='offset'/>
+        </div>
         {
           mostRecentPosts.map((post, index) => {
             return (

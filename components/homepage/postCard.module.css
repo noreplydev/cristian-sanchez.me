@@ -23,7 +23,7 @@
   justify-content: flex-end;
   align-items: flex-start;
   padding: 25px; 
-  transition: all 0.2s ease-in-out;  
+  transition: all 0.15s ease-in-out;  
   box-shadow: inset 0px 0px 0px 1px transparent; 
   /* background-color: var(--white-translucent); */
   overflow: hidden;
