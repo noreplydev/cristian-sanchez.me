@@ -1,9 +1,99 @@
 .contactContainer {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  height: 80vh;
+  height: fit-content;
   width: 100vw;
-  padding: 5vh 25vw; 
+  padding-top: 5vh;
+  padding-inline: 25vw; 
+}
+
+.titleContainer {
+  position: relative;
+  display: grid; 
+  place-items: center; 
+  font-size: 100%;
+  height: fit-content;
+  width: 100%;
+  padding: 4vh 7vw; 
+}
+
+.titleContainer h1 {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #000;
+}
+
+.titleContainer span {
+  font-size: 3rem;
+  font-weight: 600;
+  color: #0057ff;
+}
+
+.horizontalLine {
+  height: 100%;
+  width: 140%;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.verticalLines {
+  height: 300%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateY(-40px);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+  padding: 4vh 7vw; 
+  gap: 17px;
+  margin-bottom: fit-content; 
+}
+
+.form * {
+  transition: all 0.10s ease-in-out;
+  background-color: var(--gray);
+  width: 100%;
+  height: fit-content;
+  border-radius: 7px;
+  padding: 1.2vh 1vw;
+  font-size: 1rem;
+  outline: none; 
+  border: none;
+}
+
+.form > *:focus {
+  box-shadow: 
+    inset 0 0 0 2px var(--background-color), 
+    0 0 0 2px var(--vibrant-blue); 
+}
+
+.textarea {
+  height: 200px;
+  scroll-padding: 1.2vh 1.2vw;
+  resize: none;
+}
+
+.send {
+  height: fit-content;
+  width: fit-content;
+  display: grid; 
+  place-items: center; 
+  font-size: 1rem; 
+  color: #fff; 
+  background-color: var(--vibrant-blue);
+  padding: 1vh 5vh; 
+  cursor: pointer; 
 }
