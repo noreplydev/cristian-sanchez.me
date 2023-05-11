@@ -22,10 +22,21 @@ export default function Contact() {
         </div>
       </div>
       <div className={style.socialImages}>
-        <Image src={github} alt='github' className={style.socialImage}/>
-        <Image src={linkedin} alt='linkedin' className={style.socialImage}/>
-        <Image src={twitter} alt='twitter' className={style.socialImage}/>
+        <a href='https://github.com/sanchez-cristian' target='_blank'>
+          <Image src={github} alt='github' className={style.socialImage}/>
+        </a>
+        <a href='https://linkedin.com/in/cristian-sanchez-dev' target='_blank'>
+          <Image src={linkedin} alt='linkedin' className={style.socialImage}/>
+        </a>
+        <a href='https://twitter.com/devcristians' target='_blank'>
+          <Image src={twitter} alt='twitter' className={style.socialImage}/>
+        </a>
       </div>
+      <p
+        className={style.advice}
+      >Send emails is an experimental feature. Please contact contact.cristiansanchez@gmail.com for any
+        requirement.
+      </p>
       <form className={style.form}>
         <input type="email" placeholder="name@acme.com" className={style.input}/>
         <textarea placeholder="Start your message here" className={style.textarea}/>
