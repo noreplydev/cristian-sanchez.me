@@ -2,9 +2,9 @@ import GridLine from '@/components/global/GridLine'
 import style from './contact.module.css'
 
 //social icons
-import github from '@/public/assets/social/github.png'
-import linkedin from '@/public/assets/social/linkedin.png'
-import twitter from '@/public/assets/social/twitter.png'
+import github from '@/public/assets/social/github.webp'
+import linkedin from '@/public/assets/social/linkedin.webp'
+import twitter from '@/public/assets/social/twitter.webp'
 import Image from 'next/image'
 
 export default function Contact() {
