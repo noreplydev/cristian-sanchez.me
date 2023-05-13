@@ -2,7 +2,7 @@
 title: "Session auth with Express"
 slug: "session-auth-with-express"
 topics: "Node.js & Express" 
-banner: "/posts/session-auth-with-express/banner.png"
+banner: "/posts/session-auth-with-express/banner.webp"
 date: "01-05-2023"
 ---
 
