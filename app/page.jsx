@@ -1,7 +1,6 @@
 import BlogGrid from '@/components/homepage/BlogGrid'
 import style from './page.module.css'
 import { Projects } from '@/components/homepage/Projects'
-import Twitch from '@/components/homepage/Twitch'
 import CommandK from '@/components/homepage/CommandK'
 import GridLine from '@/components/global/GridLine'
 
@@ -26,7 +25,6 @@ export default function Home() {
       </section> 
       <BlogGrid/>
       <Projects/>
-      <Twitch/>
     </main>
   )
 }
