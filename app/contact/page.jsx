@@ -8,6 +8,8 @@ import twitter from '@/public/assets/social/twitter.webp'
 import Image from 'next/image'
 
 export default function Contact() {
+  const email = 'contact.cristiansanchez@gmail.com'
+
   return (
     <div className={style.contactContainer}>
       <div className={style.titleContainer}>
@@ -32,16 +34,14 @@ export default function Contact() {
           <Image src={twitter} alt='twitter' className={style.socialImage}/>
         </a>
       </div>
-      <p
-        className={style.advice}
-      >Send emails is an experimental feature. Please contact contact.cristiansanchez@gmail.com for any
-        requirement.
-      </p>
       <form className={style.form}>
-        <input type="email" placeholder="name@acme.com" className={style.input}/>
-        <textarea placeholder="Start your message here" className={style.textarea}/>
-        <button className={style.send}>Send</button>
-      </form> 
+        <input 
+          type="email" 
+          value={email}
+          className={style.input}
+          readOnly
+        />
+      </form>
     </div>
   )
 }
