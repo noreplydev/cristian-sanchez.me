@@ -24,13 +24,13 @@ export default function Contact() {
         </div>
       </div>
       <div className={style.socialImages}>
-        <a href='https://github.com/sanchez-cristian' target='_blank'>
+        <a href='https://github.com/noreplydev' target='_blank'>
           <Image src={github} alt='github' className={style.socialImage}/>
         </a>
         <a href='https://linkedin.com/in/cristian-sanchez-dev' target='_blank'>
           <Image src={linkedin} alt='linkedin' className={style.socialImage}/>
         </a>
-        <a href='https://twitter.com/devcristians' target='_blank'>
+        <a href='https://twitter.com/noreplydev' target='_blank'>
           <Image src={twitter} alt='twitter' className={style.socialImage}/>
         </a>
       </div>
