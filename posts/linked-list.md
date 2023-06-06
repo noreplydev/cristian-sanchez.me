@@ -16,3 +16,17 @@ A linked list should look like something like this. Where each letter represents
 
 ![Linked list](/posts/linked-list/linked-list.png)
 
+As you can see, each node has a value and a pointer to the next node. The last node has a pointer to null, which means that it is the last node in the list. 
+
+# Linked list types
+
+There are four key types of linked lists:
+
+- Singly linked list: Each node contains only one pointer to the next node. 
+- Doubly linked list: Each node contains two pointers, a pointer to the next node and a pointer to the previous node.
+- Circular singly linked list: Each node contains only one pointer to the next node. The last node points to the first node.
+- Circular doubly linked list: Each node contains two pointers, a pointer to the next node and a pointer to the previous node. The last node points to the first node.
+
+# Why we would use a linked list?
+
+Linked lists are used to implement many things. For example, the browser history is possible thanks to linked lists.
