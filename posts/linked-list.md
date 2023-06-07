@@ -60,3 +60,91 @@ Okay so let's remind ourselves what a singly linked list looks like. As we see i
 First, we need to create a Node class. This class will represent each node in the linked list. 
 
 ```javascript
+// ./Node.js
+
+export class Node {
+  constructor(value, next) {
+    this.value = value
+    this.next = next
+  }
+}
+```
+
+### LinkedList class
+
+Okay so we have our Node class, but we need the whole chain of nodes structure so let's create a LinkedList class that will represent the whole linked list.
+
+```javascript
+// ./LinkedList.js
+
+export class LinkedList {
+  constructor() {
+    this.head = null
+  }
+}
+```
+
+So far so good, we have our two classes, but we need to implement the operations that we talked about earlier. So let's start with the insertion operation.
+
+### Insertion
+We may want to insert a new node in different ways. We can insert a node at the beginning of the list, at the end of the list, or at a specific position in the list. Let's implement all of these insertion methods inside our LinkedList class. 
+
+```javascript	
+// Append operation []--[]--[]--[new node] 
+
+append(node) {
+  let currNode = this.head // Get the first node
+
+  // Iterate until we find the last node
+  while ( currNode.next !== null ) { 
+    currNode = currNode.next  
+  }
+
+  // and set currNode next property to the new one
+  currNode.next = node
+}  
+```
+
+```javascript
+// Prepend operation [new node]--[]--[]--[]
+prepend(node) {
+  // the new node next property will be the current head
+  node.next = this.head
+  // and the new node will be the new head
+  this.head = node
+}
+
+```
+
+```javascript
+// Insert at operation []--[]--[new node]--[]--[]
+
+insertAt(node, pos) {
+  // If the position is 0, we just need to prepend the node
+  if (pos === 0) {
+    this.prepend(node)
+    return
+  }
+
+  // Get the first node
+  let currNode = this.head 
+
+  // Iterate until we find the previous node at the position. 
+  // '&& currNode' is to avoid errors if the position is out of bounds
+  for(let i = 0; i < pos && currNode; i++) {
+    currNode = currNode.next
+  }
+
+  // If we didn't find the node, throw an error
+  if (currNode === null) {
+    throw new Error('New node index out of bounds')
+  }
+
+  // first update the new node next property
+  // then update the previous node next property
+  node.next = currNode.next 
+  currNode.next = node
+}
+```
+
+Okay, so we have our insertion methods. We could test them but for the moment trust me that they work and let's implement the deletion methods.
