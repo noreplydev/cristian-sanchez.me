@@ -23,9 +23,20 @@ As you can see, each node has a value and a pointer to the next node. The last n
 There are four key types of linked lists:
 
 - Singly linked list: Each node contains only one pointer to the next node. 
+
+![Linked list](/posts/linked-list/singly-linked-list.png)
+
 - Doubly linked list: Each node contains two pointers, a pointer to the next node and a pointer to the previous node.
+
+![Linked list](/posts/linked-list/doubly-linked-list.png)
+
 - Circular singly linked list: Each node contains only one pointer to the next node. The last node points to the first node.
+
+![Linked list](/posts/linked-list/circular-linked-list.png)
+
 - Circular doubly linked list: Each node contains two pointers, a pointer to the next node and a pointer to the previous node. The last node points to the first node.
+
+![Linked list](/posts/linked-list/circular-doubly-linked-list.png)
 
 # Why we would use a linked list?
 
