@@ -86,62 +86,65 @@ export class LinkedList {
 
 So far so good, we have our two classes, but we need to implement the operations that we talked about earlier. So let's start with the insertion operation.
 
-### Insertion
+### 1. Insertion
 We may want to insert a new node in different ways. We can insert a node at the beginning of the list, at the end of the list, or at a specific position in the list. Let's implement all of these insertion methods inside our LinkedList class. 
 
+### 1.1 Append
+
+![Linked list](/posts/linked-list/append.png)
+
+The append operation adds a new node at the end of the list. So we need to get the last node and set its next property to the new node. First we need to get the head node and iterate until we find the last node. Then we set the last node next property to the new node.
+
 ```javascript	
-// Append operation []--[]--[]--[new node] 
-
 append(node) {
-  let currNode = this.head // Get the first node
+  let currNode = this.head 
 
-  // Iterate until we find the last node
   while ( currNode.next !== null ) { 
     currNode = currNode.next  
   }
 
-  // and set currNode next property to the new one
   currNode.next = node
 }  
 ```
 
+### 1.2 Prepend
+
+![Linked list](/posts/linked-list/preppend.png)
+
+The prepend operation adds a new node at the beginning of the list. So we need to set the new node next property to the current head and set the new node as the new head.
+
 ```javascript
-// Prepend operation [new node]--[]--[]--[]
 prepend(node) {
-  // the new node next property will be the current head
   node.next = this.head
-  // and the new node will be the new head
   this.head = node
 }
-
 ```
 
-```javascript
-// Insert at operation []--[]--[new node]--[]--[]
+### 1.3 Insert at
 
+![Linked list](/posts/linked-list/insertAt.png)
+
+The insert at operation adds a new node at a specific position in the list. So we need to get the node at the position, let's name it `prev`. The new node next property will be the `prev` next property. Finally we need to set the `prev` next property to the new node.
+
+We need to check if the position is 0, because if it is 0 we need to prepend the node. Also we need to check if the position is out of bounds, because if it is we need to throw an error. Finally, we need to check if currNode is null, because if it is null we need to throw an error. This is to avoid for example indexing a node that doesn't exist.
+
+```javascript
 insertAt(node, pos) {
-  // If the position is 0, we just need to prepend the node
   if (pos === 0) {
     this.prepend(node)
     return
   }
 
-  // Get the first node
   let currNode = this.head 
-
-  // Iterate until we find the previous node at the position. 
-  // '&& currNode' is to avoid errors if the position is out of bounds
+  
   for(let i = 0; i < pos && currNode; i++) {
     currNode = currNode.next
   }
 
-  // If we didn't find the node, throw an error
   if (currNode === null) {
     throw new Error('New node index out of bounds')
   }
 
-  // first update the new node next property
-  // then update the previous node next property
   node.next = currNode.next 
   currNode.next = node
 }
