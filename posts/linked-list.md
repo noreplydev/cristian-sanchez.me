@@ -107,7 +107,7 @@ append(node) {
 }  
 ```
 
-### 1.2 Prepend
+### 1.2 Preppend
 
 ![Linked list](/posts/linked-list/preppend.png)
 
@@ -126,7 +126,7 @@ prepend(node) {
 
 The insert at operation adds a new node at a specific position in the list. So we need to get the node at the position, let's name it `prev`. The new node next property will be the `prev` next property. Finally we need to set the `prev` next property to the new node.
 
-We need to check if the position is 0, because if it is 0 we need to prepend the node. Also we need to check if the position is out of bounds, because if it is we need to throw an error. Finally, we need to check if currNode is null, because if it is null we need to throw an error. This is to avoid for example indexing a node that doesn't exist.
+We need to check if the position is 0, because if it is 0 we need to prepend the node. We also need to check if the position is out of bounds, because if it is we need to throw an error. Finally, we need to check if currNode is null, because if it is null we need to throw an error. This is to avoid for example indexing a node that doesn't exist.
 
 ```javascript
 insertAt(node, pos) {
@@ -136,6 +136,10 @@ insertAt(node, pos) {
   }
 
   let currNode = this.head 
+
+  if (this.head === null) {
+    throw new Error('The list is empty')
+  }
   
   for(let i = 0; i < pos && currNode; i++) {
     currNode = currNode.next
@@ -146,8 +150,41 @@ insertAt(node, pos) {
   }
 
   node.next = currNode.next 
-  currNode.next = node
+  currNode.next = nodeode
 }
 ```
 
 Okay, so we have our insertion methods. We could test them but for the moment trust me that they work and let's implement the deletion methods.
+
+### 2. Deletion
+
+![Linked list](/posts/linked-list/delete.png)
+
+We can delete the first node, the last node, or a node at a specific position. Let's implement this deletion method on our LinkedList class.
+
+We need to check if the position is 0, because if it is 0 we need to delete the first node. We also need to check if the position is out of bounds, because if it is we need to throw an error. Finally, we need to check if currNode is null, because if it is null we need to throw an error. This is to avoid for example indexing a node that doesn't exist.
+
+```javascript
+delete() {
+  if (this.head === null) {
+    throw new Error('The list is empty')
+  }
+
+  if (pos = 0) {
+    this.head = this.head.next
+    return 
+  } 
+
+  let currNode = this.head
+
+  for(let i = 0; i < pos && currNode; i++) {
+    currNode = currNode.next
+  }
+
+  if (currNode === null) {
+    throw new Error('Node index out of bounds')
+  }
+
+  currNode.next = currNode.next.next
+}
+```
