@@ -191,3 +191,21 @@ delete() {
 
 ### 3. Traversal
 Traversal is the procces of accesing each node in the list. We can traverse the list in different ways. We can traverse the list from the beginning to the end, or from the end to the beginning. Let's implement both of these traversal methods on our LinkedList class.
+
+### 3.1 Beginning to end
+
+To traverse the list from the beginning to the end we need to get the head node and iterate until we find the last node. Then we print the value of each node. 
+
+```javascript
+traverse() {
+  let currNode = this.head
+
+  while(currNone.next !== null) {
+    // Do anything you want here and set 
+    // the next node
+
+    console.log(currNode.value)
+    currNode = currNode.next
+  }
+}
+```
