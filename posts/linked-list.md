@@ -188,3 +188,6 @@ delete() {
   currNode.next = currNode.next.next
 }
 ```
+
+### 3. Traversal
+Traversal is the procces of accesing each node in the list. We can traverse the list in different ways. We can traverse the list from the beginning to the end, or from the end to the beginning. Let's implement both of these traversal methods on our LinkedList class.
