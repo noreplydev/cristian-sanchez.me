@@ -234,3 +234,5 @@ traverseBackwards() {
   })
 }
 ```
+
+As we can see we made different checks to avoid erros while traversing the linked list. 
