@@ -240,5 +240,10 @@ traverseBackwards() {
 As you can see we made a check to see if the head is null. This is because the head is our only entry point to the list. If the head is null the list is empty and we can't traverse it.
 
 ### 4. Search
+The search of a node on a linked list depends much on the data structure that we're using to store data on the nodes. For example, if we're only storing numbers that can be accesed using the property value of the node we will be able to compare using node.value.
 
-The search of a node on a linked list depends much on the data structure that we're using to store data on the nodes. For example, if we're only storing numbers that can be accesed using the property value of the node we will be able to compare using node.value. But if we're storing deep objects or data based on many properties we will need to compare each property of the node with the data that we're looking for. I will not recommend using many properties to store data on a node. Instead I will create another class or data structure that will be stored on the value property on the node. 
+![Linked list example explanation](/posts/linked-list/search-explanation.png)
+
+ But if we're storing deep objects or data based on many properties we will need to compare each property of the node with the data that we're looking for. I will not recommend using many properties to store data on a node. Instead I will create another class or data structure that will be stored on the value property on the node. 
+
+> We will not implement since it depends on the data structure that we're using to store data on the nodes. And in our case will be a normal traversal comparing the value of each node with the data that we're looking for.
