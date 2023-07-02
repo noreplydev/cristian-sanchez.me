@@ -165,7 +165,7 @@ We can delete the first node, the last node, or a node at a specific position. L
 We need to check if the position is 0, because if it is 0 we need to delete the first node. We also need to check if the position is out of bounds, because if it is we need to throw an error. Finally, we need to check if currNode is null, because if it is null we need to throw an error. This is to avoid for example indexing a node that doesn't exist.
 
 ```javascript
-delete() {
+deleteNode() {
   if (this.head === null) {
     throw new Error('The list is empty')
   }
@@ -247,3 +247,39 @@ The search of a node on a linked list depends much on the data structure that we
  But if we're storing deep objects or data based on many properties we will need to compare each property of the node with the data that we're looking for. I will not recommend using many properties to store data on a node. Instead I will create another class or data structure that will be stored on the value property on the node. 
 
 > We will not implement since it depends on the data structure that we're using to store data on the nodes. And in our case will be a normal traversal comparing the value of each node with the data that we're looking for.
+
+### 5. Update 
+
+To implement a update on our singly linked list we need to search for the node that we want to update and then update the value property of the node. We can update our node by passing a new node or just the value of the node. Additinally, we can update by index or by value.
+
+In this case let's update by index and passing the new value instead of a new node. 
+
+```javascript
+updateNode(pos, newValue) {
+  if (!this.head) {
+    throw new Error("The list is empty")
+  }
+
+  let currNode = this.head
+
+  for(let i = 0; i < index && currNode; i++) {
+    currNode = currNode.next
+  }
+
+  if (!currNode) {
+    throw new Error("Node position out of bounds")
+  }
+
+  currNode.value = newValue
+}
+```
+
+As you can see this code looks familiar. This is because we're using the same code that we used to get a node by index. The only difference is that we're updating the value property of the node instead of returning the node.
+
+### Conclusion
+
+In this post we learned how to implement a singly linked list in JavaScript. We learned how to implement the basic operations of a linked list. Remember that if you need the code you can find it on my [GitHub](https://github.com/noreplydev/linked-list). 
+
+Now it's your turn to implement a linked list on your next project. If you have any questions or suggestions feel free to contact me on [Twitter](https://twitter.com/noreplydev).
+
+code by @noreplydev
