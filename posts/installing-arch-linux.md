@@ -46,3 +46,16 @@ It depends on your motherboard, but you will see a screen like this:
 Once you are in the boot menu, you need to change the boot order. To change it you need to set the usb as the first boot option and the other devices as the second boot option. Once it's changed you need to quit saving changes. It depends on the motherboard how to close the boot menu but normally is especified in one corner of the screen.
 
 Once is closed the computer will restart from the usb meaning that we are running our `arch` iso. 
+
+# Installing arch linux
+
+So far so good, now we can feel like software engineers. But for now we only have a live version of arch linux. To install it we need to follow some steps.
+
+### 1. Keyboard layout
+If you try to write something and you are not using US keyboard layout, you will notice that the keys are not well mapped. To fix this we need to tell `arch` which is our keyboard layout. You could wondering which is your keyboard layout. Don't worry, if you don't know, probably you're using the one that is set on your country. If you want to check it on a more secure way try to search you keyboard model on google.
+
+Once you know your keyboard layout, you need to set it using the next command: 
+
+```bash
+ls /usr/share/kbd/keymaps/**/*.map.gz
+```
