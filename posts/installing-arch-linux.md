@@ -42,3 +42,7 @@ Once you have burned the iso into the usb, you need to plug it into the computer
 It depends on your motherboard, but you will see a screen like this:
 
 ![boot-menu](/posts/installing-arch-linux/boot-menu.png)
+
+Once you are in the boot menu, you need to change the boot order. To change it you need to set the usb as the first boot option and the other devices as the second boot option. Once it's changed you need to quit saving changes. It depends on the motherboard how to close the boot menu but normally is especified in one corner of the screen.
+
+Once is closed the computer will restart from the usb meaning that we are running our `arch` iso. 
