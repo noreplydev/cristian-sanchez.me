@@ -57,5 +57,16 @@ If you try to write something and you are not using US keyboard layout, you will
 Once you know your keyboard layout, you need to set it using the next command: 
 
 ```bash
-ls /usr/share/kbd/keymaps/**/*.map.gz
+loadkeys <keyboard-layout>
 ```
+
+For example, if you are using a spanish keyboard layout you need to run the next command:
+
+```bash
+loadkeys es
+```
+
+### 2. Internet connection
+To install arch linux my personal recommendation is to use a wired connection. First, it's easier to configure and second, it's faster. If you still thinking in use a wireless connection go to your nearest walmart and buy a ethernet cable. Jokes aside, if you want to use a wireless connection you can follow the [official guide](https://wiki.archlinux.org/title/Network_configuration/Wireless).
+
+
