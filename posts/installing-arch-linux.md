@@ -69,4 +69,14 @@ loadkeys es
 ### 2. Internet connection
 To install arch linux my personal recommendation is to use a wired connection. First, it's easier to configure and second, it's faster. If you still thinking in use a wireless connection go to your nearest walmart and buy a ethernet cable. Jokes aside, if you want to use a wireless connection you can follow the [official guide](https://wiki.archlinux.org/title/Network_configuration/Wireless).
 
+If we use a wired connection we will only need to the next command to check if we have internet connection:
+
+```bash
+ping 8.8.8.8
+```
+
+This will send a ping to google dns. If you get a response, you have internet connection. If you don't get a response, you don't have internet connection. If you don't have internet connection, you need to check your ethernet cable and your router.
+
+
+
 
